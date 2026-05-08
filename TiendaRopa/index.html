@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa | Moda Urbana</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Iconos opcionales (FontAwesome) -->
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar Superior -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">MI MARCA</div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">🔍</button>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">🛒 Carrito</a></li>
+                
+                <!-- Hamburguesa con Dropdown -->
+                <li class="hamburger-menu">
+                    <button class="btn-settings">☰</button>
+                    <div class="dropdown-content">
+                        <a href="#">Cuenta</a>
+                        <a href="#">Iniciar sesión</a>
+                        <a href="#">Contacto</a>
+                        <hr>
+                        <a href="#" class="logout">Cerrar sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrete de Imágenes (Hero Section) -->
+        <section class="carousel">
+            <div class="slide">
+                <div class="carousel-overlay">
+                    <h2>Nueva Colección Verano 2026</h2>
+                    <p>Descubre las tendencias que dominan la calle.</p>
+                </div>
+                <!-- Imagen de fondo controlada por CSS o una img aquí -->
+            </div>
+        </section>
+
+        <!-- Sección de Cards -->
+        <section class="featured-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="src/img/horizontalHombre.png" alt="Hombre" class="card-img">
+                </div>
+                <h3>Caballeros</h3>
+                <p>Explora lo último en estilo masculino.</p>
+                <a href="productos.html" class="btn-card">Ver más</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="src/img/horizonalMujer.png" alt="Mujer" class="card-img">
+                </div>
+                <h3>Damas</h3>
+                <p>Elegancia y comodidad para cada ocasión.</p>
+                <a href="productos.html" class="btn-card">Ver más</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="src/img/accesoriosPrincipal.jpg" alt="Accesorios" class="card-img">
+                </div>
+                <h3>Accesorios</h3>
+                <p>El toque final para tu outfit perfecto.</p>
+                <a href="productos.html" class="btn-card">Ver más</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mi Marca de Ropa. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Contacto</a> | <a href="#">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
