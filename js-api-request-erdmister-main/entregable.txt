@@ -1,0 +1,24 @@
+¿Qué es el objeto generado por XMLHttpRequest?
+Es un objeto de JavaScript (un constructor) que se utiliza para interactuar con servidores. Permite realizar peticiones HTTP (GET, POST, etc.)
+permite recuperar datos de una URL sin tener que refrescar la página completa.
+
+¿Qué hace el método open de xhr?
+Recibe principalmente dos parámetros: el método HTTP (como "GET") y la URL a la que se le va a pedir la información.
+
+¿Qué hace el método onload de `xhr?
+se ejecuta automáticamente cuando la transacción HTTP se ha completado con éxito.
+
+Al escribir data en la consola, ¿qué se muestra?
+suele ser la variable global donde se almacena el contenido de la respuesta (el JSON convertido en objeto o arreglo).
+
+
+
+
+¿Qué significa => en el código?
+Es una sintaxis compacta introducida en ES6 para escribir funciones anónimas. A diferencia de las funciones tradicionales, las funciones flecha no tienen su propio contexto de this
+
+¿Qué hace filter? 
+Es un método de los arreglos que crea un nuevo arreglo con todos los elementos que cumplan una condición específica (la "prueba" que le pongas).
+
+¿Cómo funciona includes en este contexto? 
+Es un método de cadenas de texto (strings) que devuelve true si una cadena se encuentra dentro de otra, sin importar en qué posición esté. Es ideal para búsquedas parciales.

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <title>JS Requests</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JS Requests</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <button type="button" id="btnLoad" class="btn btn-outline-primary">Load Data</button>
+          <button type="button" id="btnRemove" class="btn btn-outline-danger">Remove Data</button>
+          <div class="d-flex ms-auto">
+            <input class="form-control me-2" id="inputSearch" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" id="btnSearch" type="submit">Product title</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">price</th>
+            <th scope="col">description</th>
+            <th scope="col">category</th>
+          </tr>
+        </thead>
+        <tbody id="tableBodyData">
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/request.js"></script>
+  </body>
+</html>
