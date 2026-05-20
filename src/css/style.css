@@ -409,15 +409,17 @@ img { display: block; width: 100%; }
   align-items: center;
 }
 
-/* Placeholder gradient slides (replace with real img) */
+/*imagenes del carousel*/
 .slide-1 {
-  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');
+  background-image: url('../img/slide-1.jpg');
 }
+
 .slide-2 {
-  background-image: url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1600&q=80');
+  background-image: url('../img/slide-2.jpg');
 }
+
 .slide-3 {
-  background-image: url('https://images.unsplash.com/photo-1471286174890-9c112ac6476d?w=1600&q=80');
+  background-image: url('../img/slide-3.jpg');
 }
 
 .carousel-overlay {
@@ -425,8 +427,8 @@ img { display: block; width: 100%; }
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(20,18,16,.72) 0%,
-    rgba(20,18,16,.32) 60%,
+    rgba(20,18,16,.5) 0%,
+    rgba(20,18,16,.0) 60%,
     transparent 100%
   );
 }
