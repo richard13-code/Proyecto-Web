@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — Tienda de Ropa Alta Moda</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="src/css/style.css" />
+
+  <style>
+    /* ─── PAGE-SPECIFIC STYLES ─── */
+
+    /* Hero nosotros */
+    .about-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 480px;
+      background: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80') center center / cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,8,6,0.85) 0%, rgba(10,8,6,0.2) 60%, transparent 100%);
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 2rem 4rem;
+      max-width: 680px;
+    }
+    .about-hero-eyebrow {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 1rem;
+    }
+    .about-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .about-hero-title em {
+      font-style: italic;
+      color: #c9a96e;
+    }
+    .about-hero-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ─── INTRO SECTION ─── */
+    .about-intro {
+      padding: 5rem 0;
+      background: #faf9f7;
+    }
+    .about-intro-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: #1a1a1a;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .about-intro-text strong {
+      font-weight: 600;
+    }
+    .gold-divider {
+      width: 60px;
+      height: 1px;
+      background: #c9a96e;
+      margin: 0 auto 2.5rem;
+    }
+    .section-eyebrow-sm {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ─── HISTORIA SECTION ─── */
+    .about-historia {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .historia-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .historia-img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    .historia-img-wrap:hover .historia-img {
+      transform: scale(1.04);
+    }
+    .historia-accent-box {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 160px;
+      height: 160px;
+      border: 1px solid #c9a96e;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .about-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .about-section-title em {
+      font-style: italic;
+      color: #c9a96e;
+    }
+    .about-body-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: #555;
+      line-height: 1.85;
+    }
+    .about-body-text + .about-body-text {
+      margin-top: 1rem;
+    }
+    .about-year-badge {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      color: #f0ebe3;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ─── CIFRAS / STATS ─── */
+    .about-stats {
+      background: #1a1a1a;
+      padding: 4.5rem 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: #c9a96e;
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+      align-self: stretch;
+    }
+
+    /* ─── VALORES ─── */
+    .about-valores {
+      padding: 5rem 0;
+      background: #faf9f7;
+    }
+    .valor-card {
+      padding: 2.5rem 2rem;
+      background: #fff;
+      border: 1px solid #ede8e0;
+      position: relative;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      height: 100%;
+    }
+    .valor-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+    .valor-icon {
+      font-size: 1.6rem;
+      color: #c9a96e;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .valor-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+    }
+    .valor-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: #777;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .valor-number {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.4rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: #f2ede5;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ─── EQUIPO ─── */
+    .about-equipo {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .team-card {
+      text-align: center;
+    }
+    .team-img-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+    .team-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.4s ease, transform 0.5s ease;
+    }
+    .team-card:hover .team-img {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+    .team-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,8,6,0);
+      transition: background 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 1.5rem;
+    }
+    .team-card:hover .team-overlay {
+      background: rgba(10,8,6,0.25);
+    }
+    .team-social {
+      display: flex;
+      gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .team-card:hover .team-social {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .team-social a {
+      width: 34px;
+      height: 34px;
+      background: rgba(255,255,255,0.9);
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .team-social a:hover {
+      background: #c9a96e;
+      color: #fff;
+    }
+    .team-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 0.2rem;
+    }
+    .team-role {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+
+    /* ─── TIMELINE ─── */
+    .about-timeline {
+      padding: 5rem 0;
+      background: #faf9f7;
+    }
+    .timeline {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #ddd5c8;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      align-items: flex-start;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-item:nth-child(even) .timeline-body {
+      text-align: right;
+    }
+    .timeline-year {
+      flex: 0 0 calc(50% - 1.25rem);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #e8dfd0;
+      line-height: 1;
+      text-align: right;
+      padding-right: 2.5rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) .timeline-year {
+      text-align: left;
+      padding-right: 0;
+      padding-left: 2.5rem;
+    }
+    .timeline-year::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 0.6rem;
+      width: 9px;
+      height: 9px;
+      background: #c9a96e;
+      border-radius: 50%;
+    }
+    .timeline-item:nth-child(even) .timeline-year::after {
+      right: auto;
+      left: -5px;
+    }
+    .timeline-body {
+      flex: 0 0 calc(50% - 1.25rem);
+      padding-top: 0.3rem;
+    }
+    .timeline-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.35rem;
+    }
+    .timeline-desc {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: #777;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ─── SUSTENTABILIDAD ─── */
+    .about-sustentabilidad {
+      padding: 5rem 0;
+      background: #fff;
+    }
+    .sustent-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+    .sustent-block {
+      background: #1a1a1a;
+      padding: 3rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .sustent-block .about-section-title {
+      color: #fff;
+    }
+    .sustent-block .about-section-title em {
+      color: #c9a96e;
+    }
+    .sustent-body {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.85;
+    }
+    .sustent-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      border: 1px solid rgba(201,169,110,0.35);
+      padding: 0.45rem 1rem;
+      margin-top: 1.5rem;
+      width: fit-content;
+    }
+
+    /* ─── CTA ─── */
+    .about-cta {
+      padding: 5rem 0;
+      background: #faf9f7;
+      text-align: center;
+    }
+    .about-cta .about-section-title {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .btn-cta-dark {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.4rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s, color 0.25s;
+      margin: 0 0.4rem 0.6rem;
+    }
+    .btn-cta-dark:hover {
+      background: #c9a96e;
+      color: #fff;
+    }
+    .btn-cta-outline {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: transparent;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      padding: 0.9rem 2.4rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s, color 0.25s;
+      margin: 0 0.4rem 0.6rem;
+    }
+    .btn-cta-outline:hover {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    /* Mobile timeline collapse */
+    @media (max-width: 767px) {
+      .timeline::before { left: 0; transform: none; }
+      .timeline-item,
+      .timeline-item:nth-child(even) { flex-direction: column; gap: 0.5rem; padding-left: 2rem; }
+      .timeline-year,
+      .timeline-item:nth-child(even) .timeline-year {
+        text-align: left; padding: 0;
+        font-size: 1.8rem;
+      }
+      .timeline-year::after,
+      .timeline-item:nth-child(even) .timeline-year::after {
+        left: -2rem; right: auto; top: 0.4rem;
+      }
+      .timeline-body,
+      .timeline-item:nth-child(even) .timeline-body { text-align: left; }
+      .historia-accent-box { display: none; }
+      .sustent-block { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       TOP ANNOUNCEMENT BAR
+  ═══════════════════════════════════════════════ -->
+  <div class="announcement-bar">
+    <span>Envío gratuito en compras mayores a $1,500 MXN &nbsp;·&nbsp; Nueva colección Primavera–Verano 2026 disponible</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+    <div class="container-fluid px-4">
+
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-word">Tienda de Ropa</span>
+      </a>
+
+      <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
+        <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Ver carrito">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="nav-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" aria-label="Configuraciones">
+          <i class="bi bi-sliders2"></i>
+        </button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-label="Menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Colecciones</a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a class="dropdown-item" href="coleccion.html?cat=hombre">Hombre</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=mujer">Mujer</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=ninos">Niños</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=novedades">Novedades</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+        </ul>
+
+        <form class="search-form d-flex align-items-center me-lg-3 my-2 my-lg-0" role="search">
+          <div class="search-wrapper">
+            <input class="search-input" type="search" placeholder="Buscar productos..." aria-label="Buscar" />
+            <button class="search-btn" type="submit" aria-label="Buscar"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito de compras">
+            <i class="bi bi-bag"></i>
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="nav-icon-btn settings-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" aria-label="Configuraciones">
+            <i class="bi bi-sliders2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       SETTINGS OFFCANVAS
+  ═══════════════════════════════════════════════ -->
+  <div class="offcanvas offcanvas-end offcanvas-settings" tabindex="-1" id="settingsOffcanvas" aria-labelledby="settingsOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="settingsOffcanvasLabel"><i class="bi bi-sliders2 me-2"></i>Configuraciones</h5>
+      <button type="button" class="btn-close btn-close-settings" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="settings-section">
+        <h6 class="settings-section-title">Apariencia</h6>
+        <div class="setting-row">
+          <div>
+            <span class="setting-label"><i class="bi bi-moon-stars me-2"></i>Modo Oscuro</span>
+            <p class="setting-desc">Cambia entre tema claro y oscuro.</p>
+          </div>
+          <div class="form-check form-switch ms-3">
+            <input class="form-check-input toggle-switch" type="checkbox" role="switch" id="darkModeToggle" />
+          </div>
+        </div>
+      </div>
+      <hr class="settings-divider" />
+      <div class="settings-section">
+        <h6 class="settings-section-title">Idioma y Región</h6>
+        <div class="setting-row flex-column align-items-start gap-2">
+          <span class="setting-label"><i class="bi bi-globe2 me-2"></i>Idioma</span>
+          <select class="form-select settings-select" id="langSelect">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+        <div class="setting-row flex-column align-items-start gap-2 mt-3">
+          <span class="setting-label"><i class="bi bi-currency-dollar me-2"></i>Moneda</span>
+          <select class="form-select settings-select" id="currencySelect">
+            <option value="mxn" selected>MXN — Peso Mexicano</option>
+            <option value="usd">USD — Dólar</option>
+            <option value="eur">EUR — Euro</option>
+          </select>
+        </div>
+      </div>
+      <hr class="settings-divider" />
+      <div class="settings-section">
+        <h6 class="settings-section-title">Cuenta</h6>
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="settings-link"><i class="bi bi-person me-2"></i>Mi Perfil</a>
+          <a href="#" class="settings-link"><i class="bi bi-heart me-2"></i>Lista de Deseos</a>
+          <a href="#" class="settings-link"><i class="bi bi-clock-history me-2"></i>Historial de Pedidos</a>
+          <a href="#" class="settings-link"><i class="bi bi-shield-lock me-2"></i>Privacidad y Seguridad</a>
+        </div>
+      </div>
+      <hr class="settings-divider" />
+      <div class="settings-section">
+        <h6 class="settings-section-title">Notificaciones</h6>
+        <div class="setting-row">
+          <span class="setting-label"><i class="bi bi-bell me-2"></i>Ofertas y Promociones</span>
+          <div class="form-check form-switch ms-3">
+            <input class="form-check-input toggle-switch" type="checkbox" role="switch" id="notifToggle" checked />
+          </div>
+        </div>
+        <div class="setting-row mt-2">
+          <span class="setting-label"><i class="bi bi-envelope me-2"></i>Newsletter</span>
+          <div class="form-check form-switch ms-3">
+            <input class="form-check-input toggle-switch" type="checkbox" role="switch" id="newsletterToggle" checked />
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-settings-save w-100 mt-4" id="saveSettings">Guardar Cambios</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section class="about-hero" aria-label="Sobre nosotros">
+    <div class="about-hero-content">
+      <span class="about-hero-eyebrow">Nuestra Historia</span>
+      <h1 class="about-hero-title">Moda que<br /><em>cuenta historias</em></h1>
+      <p class="about-hero-sub">Desde 2005, vistiendo a familias con piezas que trascienden tendencias y abrazan el estilo propio.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INTRO
+  ═══════════════════════════════════════════════ -->
+  <section class="about-intro">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow-sm">Quiénes Somos</span>
+        <div class="gold-divider"></div>
+        <p class="about-intro-text">
+          Somos una casa de moda mexicana comprometida con la <strong>elegancia sin esfuerzo</strong>. Cada prenda que diseñamos nace de la creencia de que vestirse bien es una forma de respetarse a uno mismo y de comunicar quién eres al mundo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HISTORIA
+  ═══════════════════════════════════════════════ -->
+  <section class="about-historia">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="historia-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80"
+              alt="Taller de confección"
+              class="historia-img"
+              loading="lazy"
+            />
+            <div class="historia-accent-box"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 position-relative pe-lg-5">
+          <span class="about-year-badge">2005</span>
+          <span class="section-eyebrow-sm">Nuestra Historia</span>
+          <h2 class="about-section-title">Dos décadas de<br /><em>pasión por la moda</em></h2>
+          <p class="about-body-text">
+            Tienda de Ropa nació en 2005 en la Ciudad de México de la mano de la diseñadora Valentina Ríos, con un atelier de 80 m² en la Colonia Condesa y una visión clara: crear ropa de alta calidad accesible para toda la familia, sin renunciar ni un ápice al detalle o al acabado.
+          </p>
+          <p class="about-body-text">
+            Lo que comenzó como una pequeña boutique se convirtió rápidamente en referente de la moda contemporánea en México. Hoy contamos con cuatro tiendas en CDMX, Guadalajara y Monterrey, un equipo de más de 120 personas y una plataforma digital que lleva nuestras colecciones a todo el país.
+          </p>
+          <p class="about-body-text">
+            Cada temporada presentamos colecciones para <strong>hombre, mujer y niños</strong>, diseñadas en México y confeccionadas con las mejores telas nacionales e importadas, bajo estrictos estándares de manufactura responsable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ESTADÍSTICAS
+  ═══════════════════════════════════════════════ -->
+  <section class="about-stats" aria-label="Cifras clave">
+    <div class="container">
+      <div class="row g-0 align-items-center">
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Años de experiencia</span>
+        </div>
+        <div class="col-md-auto d-none d-md-block stat-divider mx-0 px-0" style="height:80px;"></div>
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Tiendas en México</span>
+        </div>
+        <div class="col-md-auto d-none d-md-block stat-divider" style="height:80px;"></div>
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Personas en el equipo</span>
+        </div>
+        <div class="col-md-auto d-none d-md-block stat-divider" style="height:80px;"></div>
+        <div class="col-6 col-md-3 stat-item">
+          <span class="stat-number">300+</span>
+          <span class="stat-label">Piezas por temporada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       VALORES
+  ═══════════════════════════════════════════════ -->
+  <section class="about-valores">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow-sm">Lo Que Nos Mueve</span>
+        <div class="gold-divider"></div>
+        <h2 class="about-section-title">Nuestros <em>valores</em></h2>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="valor-card">
+            <span class="valor-number">01</span>
+            <i class="bi bi-gem valor-icon"></i>
+            <h3 class="valor-title">Calidad sin compromiso</h3>
+            <p class="valor-desc">Cada pieza pasa por un riguroso control de calidad antes de llegar a tus manos. Usamos telas de primera línea y procesos de costura artesanal que garantizan durabilidad y confort.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="valor-card">
+            <span class="valor-number">02</span>
+            <i class="bi bi-leaf valor-icon"></i>
+            <h3 class="valor-title">Moda consciente</h3>
+            <p class="valor-desc">Trabajamos con proveedores certificados en prácticas sostenibles, reducimos el desperdicio textil y apostamos por materiales orgánicos y reciclados en el 40% de nuestra producción.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="valor-card">
+            <span class="valor-number">03</span>
+            <i class="bi bi-people valor-icon"></i>
+            <h3 class="valor-title">Comunidad e inclusión</h3>
+            <p class="valor-desc">Diseñamos para cuerpos reales. Nuestras colecciones van de la talla XS a la 4XL, y celebramos la diversidad en cada campaña, con modelos de todas las edades y procedencias.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="valor-card">
+            <span class="valor-number">04</span>
+            <i class="bi bi-lightbulb valor-icon"></i>
+            <h3 class="valor-title">Innovación constante</h3>
+            <p class="valor-desc">Exploramos nuevas técnicas de teñido natural, corte cero desperdicio y tejidos inteligentes para mantenernos a la vanguardia sin perder nuestra esencia artesanal.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TIMELINE
+  ═══════════════════════════════════════════════ -->
+  <section class="about-timeline">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow-sm">Hitos Importantes</span>
+        <div class="gold-divider"></div>
+        <h2 class="about-section-title">Nuestro <em>camino</em></h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">2005</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Apertura del primer atelier</h4>
+            <p class="timeline-desc">Valentina Ríos inaugura la primera boutique en la Colonia Condesa, CDMX, con una colección cápsula de 30 piezas para mujer.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2009</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Colección Hombre</h4>
+            <p class="timeline-desc">Lanzamos nuestra primera línea masculina, incorporando sastrería contemporánea y streetwear refinado que rápidamente se convierte en favorita.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2013</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Expansión a Guadalajara</h4>
+            <p class="timeline-desc">Abrimos nuestra segunda tienda en el corazón de la Zona Rosa de Guadalajara, consolidando nuestra presencia nacional.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Colección Niños & e-commerce</h4>
+            <p class="timeline-desc">Lanzamos la línea infantil y nuestra tienda en línea, llevando la alta moda familiar a todo México con envíos en 48 horas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Premio Nacional de Diseño</h4>
+            <p class="timeline-desc">Recibimos el Premio Nacional de Diseño de Moda por nuestra colección "Raíces", inspirada en textiles mexicanos tradicionales.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Colección Primavera–Verano</h4>
+            <p class="timeline-desc">Presentamos nuestra colección más ambiciosa hasta la fecha, con 300 piezas que fusionan herencia artesanal con diseño contemporáneo global.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       EQUIPO
+  ═══════════════════════════════════════════════ -->
+  <section class="about-equipo">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow-sm">Las Personas Detrás</span>
+        <div class="gold-divider"></div>
+        <h2 class="about-section-title">Nuestro <em>equipo creativo</em></h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80" alt="Valentina Ríos" class="team-img" loading="lazy" />
+              <div class="team-overlay">
+                <div class="team-social">
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="team-name">Valentina Ríos</h4>
+            <span class="team-role">Fundadora & Directora Creativa</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Rodrigo Castillo" class="team-img" loading="lazy" />
+              <div class="team-overlay">
+                <div class="team-social">
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="team-name">Rodrigo Castillo</h4>
+            <span class="team-role">Director de Diseño — Hombre</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Camila Herrera" class="team-img" loading="lazy" />
+              <div class="team-overlay">
+                <div class="team-social">
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="team-name">Camila Herrera</h4>
+            <span class="team-role">Directora de Diseño — Mujer</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Marco Vidal" class="team-img" loading="lazy" />
+              <div class="team-overlay">
+                <div class="team-social">
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <h4 class="team-name">Marco Vidal</h4>
+            <span class="team-role">Director General de Operaciones</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SUSTENTABILIDAD
+  ═══════════════════════════════════════════════ -->
+  <section class="about-sustentabilidad">
+    <div class="container-fluid px-0">
+      <div class="row g-0">
+        <div class="col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=900&q=80"
+            alt="Moda sustentable"
+            class="sustent-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <div class="sustent-block">
+            <span class="section-eyebrow-sm">Compromiso Ambiental</span>
+            <h2 class="about-section-title">Moda que<br /><em>cuida el planeta</em></h2>
+            <p class="sustent-body">
+              Creemos que la moda y la responsabilidad ambiental no son opuestos. Desde 2019, hemos reducido nuestra huella de carbono en un 35%, trabajamos exclusivamente con talleres certificados que garantizan salarios justos y condiciones dignas, y el 60% de nuestros empaques son reciclables o biodegradables.
+            </p>
+            <p class="sustent-body mt-3">
+              Nuestra línea <em>Consciente</em> utiliza algodón orgánico certificado GOTS, lino europeo y telas recicladas de botellas PET. Porque cada decisión de compra puede ser un voto a favor del mundo que queremos dejar.
+            </p>
+            <span class="sustent-badge">
+              <i class="bi bi-award"></i> Certificación B Corp — En proceso 2026
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CTA FINAL
+  ═══════════════════════════════════════════════ -->
+  <section class="about-cta">
+    <div class="container">
+      <span class="section-eyebrow-sm">¿Lista para explorar?</span>
+      <div class="gold-divider"></div>
+      <h2 class="about-section-title">
+        Descubre la colección<br /><em>que te define</em>
+      </h2>
+      <div>
+        <a href="coleccion.html?cat=novedades" class="btn-cta-dark">Ver Novedades</a>
+        <a href="coleccion.html?cat=mujer" class="btn-cta-outline">Colección Mujer</a>
+        <a href="coleccion.html?cat=hombre" class="btn-cta-outline">Colección Hombre</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWSLETTER
+  ═══════════════════════════════════════════════ -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <span class="section-eyebrow" style="color:var(--gold-light)">Únete a Nosotros</span>
+            <h2 class="newsletter-title">Sé el primero en<br /><em>conocer las novedades</em></h2>
+            <p class="newsletter-sub">Recibe acceso exclusivo a nuevas colecciones, ofertas y eventos especiales.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <div class="newsletter-input-wrap">
+                <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required aria-label="Correo electrónico" />
+                <button type="submit" class="btn newsletter-submit">Suscribirme <i class="bi bi-arrow-right ms-1"></i></button>
+              </div>
+              <p class="newsletter-disclaimer">Al suscribirte aceptas nuestra <a href="#">Política de Privacidad</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-5 footer-top">
+        <div class="col-12 col-md-4 col-lg-3">
+          <a href="index.html" class="footer-brand">Tienda de Ropa</a>
+          <p class="footer-tagline">Moda consciente, diseño atemporal.<br />Cada prenda cuenta una historia.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 col-lg-2 offset-lg-1">
+          <h6 class="footer-col-title">Tienda</h6>
+          <ul class="footer-links">
+            <li><a href="coleccion.html?cat=mujer">Mujer</a></li>
+            <li><a href="coleccion.html?cat=hombre">Hombre</a></li>
+            <li><a href="coleccion.html?cat=ninos">Niños</a></li>
+            <li><a href="coleccion.html?cat=novedades">Novedades</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 col-lg-2">
+          <h6 class="footer-col-title">Ayuda</h6>
+          <ul class="footer-links">
+            <li><a href="#">Centro de Ayuda</a></li>
+            <li><a href="#">Seguimiento de Pedido</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Guía de Tallas</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 col-lg-2">
+          <h6 class="footer-col-title">Empresa</h6>
+          <ul class="footer-links">
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="#">Sustentabilidad</a></li>
+            <li><a href="#">Trabaja con Nosotros</a></li>
+            <li><a href="#">Afiliados</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-col-title">Contacto</h6>
+          <ul class="footer-links footer-contact">
+            <li><i class="bi bi-geo-alt me-2"></i>Av. Presidente Masaryk 111,<br />&nbsp;&nbsp;&nbsp;&nbsp;CDMX, México</li>
+            <li><i class="bi bi-telephone me-2"></i><a href="tel:+525500000000">+52 55 0000 0000</a></li>
+            <li><i class="bi bi-envelope me-2"></i><a href="mailto:hola@ejemplo.mx">hola@ejemplo.mx</a></li>
+            <li><i class="bi bi-clock me-2"></i>Lun–Sáb: 10:00–20:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row align-items-center gy-2">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="footer-copy">&copy; 2026 Tienda de Ropa Alta Moda. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-legal">
+              <a href="#">Aviso de Privacidad</a>
+              <span class="footer-legal-sep">·</span>
+              <a href="#">Términos y Condiciones</a>
+              <span class="footer-legal-sep">·</span>
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+    <div id="settingsToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle me-2"></i> Cambios guardados correctamente.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script type="module" src="src/js/main.js"></script>
+
+</body>
+</html>
