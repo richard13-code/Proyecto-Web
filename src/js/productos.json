@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Blazer Slim Fit",
+    "price": 1890,
+    "oldPrice": 2400,
+    "category": "hombre",
+    "isNew": true,
+    "image": "src/img/producto-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vestido Floral Midi",
+    "price": 1250,
+    "oldPrice": null,
+    "category": "mujer",
+    "isNew": false,
+    "image": "src/img/producto-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Conjunto Verano",
+    "price": 680,
+    "oldPrice": 850,
+    "category": "ninos",
+    "isNew": false,
+    "image": "src/img/producto-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gabardina Clásica",
+    "price": 2990,
+    "oldPrice": null,
+    "category": "mujer",
+    "isNew": true,
+    "image": "src/img/producto-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Camisa Casual Algodón",
+    "price": 850,
+    "oldPrice": 1100,
+    "category": "hombre",
+    "isNew": true,
+    "image": "src/img/producto-1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Sudadera Animada Infantil",
+    "price": 520,
+    "oldPrice": null,
+    "category": "ninos",
+    "isNew": true,
+    "image": "src/img/producto-3.jpg"
+  }
+]

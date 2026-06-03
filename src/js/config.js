@@ -17,3 +17,13 @@ export const SCROLL_CONFIG = {
   NAVBAR_SCROLL: 20,
   BACK_TO_TOP_SCROLL: 400
 };
+
+// Configuración de la API y el Carrito por Cookies
+export const API_CONFIG = {
+  PRODUCTS_URL: 'src/js/productos.json'
+};
+
+export const COOKIE_CONFIG = {
+  CART_NAME: 'maison_cart',
+  DAYS_TO_EXPIRE: 7
+};
