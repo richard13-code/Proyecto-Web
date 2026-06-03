@@ -47,7 +47,7 @@
 
       <!-- Mobile: cart + settings toggle -->
       <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
-        <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito">
+        <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Ver carrito">
           <i class="bi bi-bag"></i>
           <span class="cart-badge">3</span>
         </a>
@@ -95,11 +95,11 @@
               data-bs-toggle="dropdown"
             >Colecciones</a>
             <ul class="dropdown-menu dropdown-menu-custom">
-              <li><a class="dropdown-item" href="hombre.html">Hombre</a></li>
-              <li><a class="dropdown-item" href="mujer.html">Mujer</a></li>
-              <li><a class="dropdown-item" href="ninos.html">Niños</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=hombre">Hombre</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=mujer">Mujer</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=ninos">Niños</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Novedades</a></li>
+              <li><a class="dropdown-item" href="#coleccion.html?cat=novedades">Novedades</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -353,7 +353,7 @@
   <!-- ═══════════════════════════════════════════════
        SECTION: CATEGORÍAS (3 CARDS)
   ═══════════════════════════════════════════════ -->
-  <section class="categories-section" id="categorias">
+  <section class="categories-section py-5 bg-light">
     <div class="container">
 
       <div class="section-header text-center">
@@ -385,7 +385,7 @@
               <p class="category-card-desc">
                 Desde vestidos de alta costura hasta básicos imprescindibles. Elegancia en cada prenda.
               </p>
-              <a href="mujer.html" class="btn btn-category">
+              <a href="coleccion.html?cat=mujer" class="btn btn-category">
                 Ver Colección <i class="bi bi-arrow-right ms-2"></i>
               </a>
             </div>
@@ -411,7 +411,7 @@
               <p class="category-card-desc">
                 Sastrería moderna y streetwear refinado. Estilo sin esfuerzo para el hombre contemporáneo.
               </p>
-              <a href="hombre.html" class="btn btn-category btn-category--dark">
+              <a href="coleccion.html?cat=hombre" class="btn btn-category btn-category--dark">
                 Ver Colección <i class="bi bi-arrow-right ms-2"></i>
               </a>
             </div>
@@ -437,7 +437,7 @@
               <p class="category-card-desc">
                 Colores vibrantes, tejidos suaves y diseños que inspiran la imaginación de los más pequeños.
               </p>
-              <a href="ninos.html" class="btn btn-category">
+              <a href="coleccion.html?cat=ninos" class="btn btn-category">
                 Ver Colección <i class="bi bi-arrow-right ms-2"></i>
               </a>
             </div>
@@ -451,85 +451,21 @@
   <!-- ═══════════════════════════════════════════════
        SECTION: PRODUCTOS DESTACADOS
   ═══════════════════════════════════════════════ -->
-  <section class="featured-section">
+  <section class="featured-section py-5">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">Lo Más Visto</span>
-        <h2 class="section-title">Productos Destacados</h2>
+      <div class="text-center mb-5">
+        <span class="text-uppercase tracking-wider text-muted small">Selección Exclusiva</span>
+        <h2 class="display-5 font-serif mt-1">Productos Destacados</h2>
       </div>
-      <div class="row g-3">
 
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-1.jpg" alt="Blazer Slim" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-              <span class="product-tag">Nuevo</span>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Hombre</p>
-              <h4 class="product-name">Blazer Slim Fit</h4>
-              <p class="product-price">$1,890 <span class="product-old-price">$2,400</span></p>
-            </div>
+      <div class="row g-4 justify-content-center" id="featuredProductsContainer">
+        <div class="text-center my-5">
+          <div class="spinner-border text-dark" role="status">
+            <span class="visually-hidden">Cargando colección premium...</span>
           </div>
         </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-2.jpg" alt="Vestido Floral" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Mujer</p>
-              <h4 class="product-name">Vestido Floral Midi</h4>
-              <p class="product-price">$1,250</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-3.jpg" alt="Conjunto Niños" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-              <span class="product-tag product-tag--sale">−20%</span>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Niños</p>
-              <h4 class="product-name">Conjunto Verano</h4>
-              <p class="product-price">$680 <span class="product-old-price">$850</span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-4.jpg" alt="Gabardina" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Mujer</p>
-              <h4 class="product-name">Gabardina Clásica</h4>
-              <p class="product-price">$2,990</p>
-            </div>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
@@ -599,10 +535,10 @@
         <div class="col-6 col-md-2 col-lg-2 offset-lg-1">
           <h6 class="footer-col-title">Tienda</h6>
           <ul class="footer-links">
-            <li><a href="#">Mujer</a></li>
-            <li><a href="#">Hombre</a></li>
-            <li><a href="#">Niños</a></li>
-            <li><a href="#">Novedades</a></li>
+            <li><a href="#coleccion.html?cat=mujer">Mujer</a></li>
+            <li><a href="#coleccion.html?cat=hombre">Hombre</a></li>
+            <li><a href="#coleccion.html?cat=ninos">Niños</a></li>
+            <li><a href="#coleccion.html?cat=novedades">Novedades</a></li>
             <li><a href="#">Ofertas</a></li>
           </ul>
         </div>
@@ -686,6 +622,38 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Main JS -->
   <script type="module" src="src/js/main.js"></script>
+
+  
+  <!-- ═══════════════════════════════════════════════
+       Esqueleto Modal
+  ═══════════════════════════════════════════════ -->
+  
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="" id="modalProductImg" class="img-fluid w-100" style="object-fit: cover; height: 450px;" alt="Producto">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+              <span class="text-muted small text-uppercase tracking-wider" id="modalProductCategory">CATEGORÍA</span>
+              <h3 class="display-6 my-2" id="modalProductName">Nombre del Producto</h3>
+              <p class="fs-4 text-dark mb-4" id="modalProductPrice">$0.00</p>
+              <p class="text-muted mb-4 small">Esta prenda de alta costura ha sido confeccionada con materiales sustentables premium de nuestra línea de temporada. Ajuste perfecto de diseño contemporáneo.</p>
+              
+              <button id="modalBtnAddToCart" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase tracking-wider">
+                <i class="bi bi-bag-plus me-2"></i> Añadir a la Bolsa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
