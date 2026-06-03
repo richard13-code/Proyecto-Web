@@ -613,9 +613,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('modalProductImg').alt = product.name;
             document.getElementById('modalProductCategory').textContent = product.category.toUpperCase();
             document.getElementById('modalProductName').textContent = product.name;
-            document.getElementById('modalProductPrice').textContent = `$${product.price.toLocaleString()}`;
-            
-            const modalBtn = document.getElementById('modalBtnAddToCart');
+            document.getElementById('modalProductPrice').textContent = `$${product.price.toLocaleString()}`;       
+
+            const modalDescription = document.querySelector('#productDetailModal .modal-body p.text-muted');
+            const modalBtn = document.getElementById('modalBtnAddToCart'); 
+
+            if (modalDescription) modalDescription.textContent = product.description;
+         
             if (modalBtn) modalBtn.setAttribute('data-id', product.id);
 
             const modalEl = document.getElementById('productDetailModal');
