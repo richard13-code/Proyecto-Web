@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Abre el Modal rellenando dinámicamente la información desde el JSON
-  function initDetailListeners() {
+function initDetailListeners() {
     document.querySelectorAll('.view-details').forEach(element => {
       element.addEventListener('click', () => {
         const productId = parseInt(element.getAttribute('data-id'));
