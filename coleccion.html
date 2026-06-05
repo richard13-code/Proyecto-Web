@@ -3,148 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Ropa — Alta Moda</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  />
+  <title>Tienda de Ropa — Colecciones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="src/css/style.css" />
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
     <div class="container-fluid px-4">
-
-      <a class="navbar-brand" href="index.html">
-        <span class="brand-word">Tienda de Ropa</span>
-      </a>
-
+      <a class="navbar-brand" href="index.html"><span class="brand-word">Tienda de Ropa</span></a>
       <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
         <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito">
-          <i class="bi bi-bag"></i>
-          <span class="cart-badge">3</span>
+          <i class="bi bi-bag"></i><span class="cart-badge">0</span>
         </a>
-        <button
-          class="nav-icon-btn"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#settingsOffcanvas"
-          aria-controls="settingsOffcanvas"
-          aria-label="Configuraciones"
-        >
+        <button class="nav-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" aria-label="Configuraciones">
           <i class="bi bi-sliders2"></i>
         </button>
       </div>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Menú"
-      >
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-expanded="false" aria-label="Menú">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarMain">
-
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-            >Colecciones</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Colecciones</a>
             <ul class="dropdown-menu dropdown-menu-custom">
               <li><a class="dropdown-item" href="coleccion.html?cat=hombre">Hombre</a></li>
               <li><a class="dropdown-item" href="coleccion.html?cat=mujer">Mujer</a></li>
               <li><a class="dropdown-item" href="coleccion.html?cat=ninos">Niños</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="coleccion.html?cat=novedades">Novedades</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="coleccion.html?temporada=primavera">🌸 Primavera</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?temporada=verano">☀️ Verano</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?temporada=otono">🍂 Otoño</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?temporada=invierno">❄️ Invierno</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ofertas.html">Ofertas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
         </ul>
-
         <form class="search-form d-flex align-items-center me-lg-3 my-2 my-lg-0" role="search" id="searchForm">
           <div class="search-wrapper">
-            <input
-              class="search-input"
-              type="search"
-              id="searchInput"
-              placeholder="Buscar productos..."
-              aria-label="Buscar"
-            />
-            <button class="search-btn" type="submit" aria-label="Buscar">
-              <i class="bi bi-search"></i>
-            </button>
+            <input class="search-input" type="search" id="searchInput" placeholder="Buscar productos..." aria-label="Buscar" />
+            <button class="search-btn" type="submit" aria-label="Buscar"><i class="bi bi-search"></i></button>
           </div>
         </form>
-
         <div class="d-none d-lg-flex align-items-center gap-3">
-          <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito de compras">
-            <i class="bi bi-bag"></i>
-            <span class="cart-badge">3</span>
+          <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito">
+            <i class="bi bi-bag"></i><span class="cart-badge">0</span>
           </a>
-
-          <button
-            class="nav-icon-btn settings-btn"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#settingsOffcanvas"
-            aria-controls="settingsOffcanvas"
-            aria-label="Configuraciones"
-          >
+          <button class="nav-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" aria-label="Configuraciones">
             <i class="bi bi-sliders2"></i>
           </button>
         </div>
-
-      </div></div>
+      </div>
+    </div>
   </nav>
 
-  <div
-    class="offcanvas offcanvas-end offcanvas-settings"
-    tabindex="-1"
-    id="settingsOffcanvas"
-    aria-labelledby="settingsOffcanvasLabel"
-  >
+  <div class="offcanvas offcanvas-end offcanvas-settings" tabindex="-1" id="settingsOffcanvas" aria-labelledby="settingsOffcanvasLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="settingsOffcanvasLabel">
-        <i class="bi bi-sliders2 me-2"></i>Configuraciones
-      </h5>
-      <button
-        type="button"
-        class="btn-close btn-close-settings"
-        data-bs-dismiss="offcanvas"
-        aria-label="Cerrar"
-      ></button>
+      <h5 class="offcanvas-title" id="settingsOffcanvasLabel"><i class="bi bi-sliders2 me-2"></i>Configuraciones</h5>
+      <button type="button" class="btn-close btn-close-settings" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
     <div class="offcanvas-body">
-
       <div class="settings-section">
         <h6 class="settings-section-title">Apariencia</h6>
         <div class="setting-row">
@@ -153,18 +80,11 @@
             <p class="setting-desc">Cambia entre tema claro y oscuro.</p>
           </div>
           <div class="form-check form-switch ms-3">
-            <input
-              class="form-check-input toggle-switch"
-              type="checkbox"
-              role="switch"
-              id="darkModeToggle"
-            />
+            <input class="form-check-input toggle-switch" type="checkbox" role="switch" id="darkModeToggle" />
           </div>
         </div>
       </div>
-
       <hr class="settings-divider" />
-
       <div class="settings-section">
         <h6 class="settings-section-title">Idioma y Región</h6>
         <div class="setting-row flex-column align-items-start gap-2">
@@ -172,8 +92,6 @@
           <select class="form-select settings-select" id="langSelect">
             <option value="es" selected>Español</option>
             <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="pt">Português</option>
           </select>
         </div>
         <div class="setting-row flex-column align-items-start gap-2 mt-3">
@@ -181,13 +99,10 @@
           <select class="form-select settings-select" id="currencySelect">
             <option value="mxn" selected>MXN — Peso Mexicano</option>
             <option value="usd">USD — Dólar</option>
-            <option value="eur">EUR — Euro</option>
           </select>
         </div>
       </div>
-
       <hr class="settings-divider" />
-
       <div class="settings-section">
         <h6 class="settings-section-title">Cuenta</h6>
         <div class="d-flex flex-column gap-2">
@@ -197,9 +112,7 @@
           <a href="#" class="settings-link"><i class="bi bi-shield-lock me-2"></i>Privacidad y Seguridad</a>
         </div>
       </div>
-
       <hr class="settings-divider" />
-
       <div class="settings-section">
         <h6 class="settings-section-title">Notificaciones</h6>
         <div class="setting-row">
@@ -215,80 +128,662 @@
           </div>
         </div>
       </div>
-
-      <button class="btn btn-settings-save w-100 mt-4" id="saveSettings">
-        Guardar Cambios
-      </button>
-
+      <button class="btn btn-settings-save w-100 mt-4" id="saveSettings">Guardar Cambios</button>
     </div>
   </div>
 
   <section class="features-bar">
     <div class="container-fluid">
       <div class="row g-0">
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-truck"></i>
-          <span>Envío Gratis +$1,500</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-arrow-return-left"></i>
-          <span>Devoluciones 30 días</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-shield-check"></i>
-          <span>Pago 100% Seguro</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-headset"></i>
-          <span>Soporte 24/7</span>
-        </div>
+        <div class="col-6 col-md-3 feature-item"><i class="bi bi-truck"></i><span>Envío Gratis +$1,500</span></div>
+        <div class="col-6 col-md-3 feature-item"><i class="bi bi-arrow-return-left"></i><span>Devoluciones 30 días</span></div>
+        <div class="col-6 col-md-3 feature-item"><i class="bi bi-shield-check"></i><span>Pago 100% Seguro</span></div>
+        <div class="col-6 col-md-3 feature-item"><i class="bi bi-headset"></i><span>Soporte 24/7</span></div>
       </div>
     </div>
   </section>
 
-  <section class="collection-section py-5" style="margin-top: 30px;">
+  <!-- ═══════ SECCIÓN PRINCIPAL DE COLECCIONES ═══════ -->
+  <section class="collection-section py-5" id="seasonSection" style="margin-top:30px;">
     <div class="container">
-      <div class="text-center mb-5">
+
+      <div class="text-center mb-4">
         <span class="text-uppercase tracking-wider text-muted small" id="collectionEyebrow">Colección</span>
         <h2 class="display-5" id="collectionTitle">Cargando...</h2>
       </div>
 
-      <div class="row g-4 justify-content-center" id="productsContainer">
-        <div class="text-center my-5">
-          <div class="spinner-border text-dark" role="status">
-            <span class="visually-hidden">Cargando productos...</span>
+      <!-- BARRA DE FILTROS -->
+      <div class="collection-filters" id="filterBar">
+        <button class="filter-btn" data-filter="cat" data-value="novedades">✨ Novedades</button>
+        <button class="filter-btn" data-filter="cat" data-value="mujer">Mujer</button>
+        <button class="filter-btn" data-filter="cat" data-value="hombre">Hombre</button>
+        <button class="filter-btn" data-filter="cat" data-value="ninos">Niños</button>
+        <div class="filter-separator"></div>
+        <button class="filter-btn" data-filter="temporada" data-value="primavera">🌸 Primavera</button>
+        <button class="filter-btn" data-filter="temporada" data-value="verano">☀️ Verano</button>
+        <button class="filter-btn" data-filter="temporada" data-value="otono">🍂 Otoño</button>
+        <button class="filter-btn" data-filter="temporada" data-value="invierno">❄️ Invierno</button>
+      </div>
+
+      <!-- VISTA CATEGORÍA (carga dinámica desde JSON) -->
+      <div id="catView">
+        <div class="row g-4 justify-content-center" id="productsContainer">
+          <div class="text-center my-5">
+            <div class="spinner-border text-dark" role="status">
+              <span class="visually-hidden">Cargando productos...</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- VISTA TEMPORADAS (HTML estático, mismo diseño de tarjetas) -->
+      <div id="seasonView" style="display:none;">
+
+        <!-- ══ PRIMAVERA ══ -->
+        <div class="season-block" id="season-primavera">
+          <div class="season-header">
+            <span class="season-badge">🌸 Primavera 2026</span>
+            <h2 class="season-title">Colección <em>Primavera</em></h2>
+            <p class="text-muted small">Tonos pastel, telas ligeras y siluetas fluidas que celebran el renacimiento de la naturaleza.</p>
+            <div class="season-divider"></div>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop" alt="Blusa Flores Primavera" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Blusa Flores Primavera</h4>
+                  <p class="product-price">$890</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?q=80&w=600&auto=format&fit=crop" alt="Pantalón Lino Natural" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Pantalón Lino Natural</h4>
+                  <p class="product-price">$1,150 <span class="product-old-price">$1,490</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop" alt="Vestido Midi Floral" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Vestido Midi Floral</h4>
+                  <p class="product-price">$1,390</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?q=80&w=600&auto=format&fit=crop" alt="Conjunto Primavera Niños" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-20%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">NIÑOS</p>
+                  <h4 class="product-name">Conjunto Primavera</h4>
+                  <p class="product-price">$540 <span class="product-old-price">$675</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=600&auto=format&fit=crop" alt="Cardigan Tejido Rosa" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Cardigan Tejido Rosa</h4>
+                  <p class="product-price">$1,050</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=600&auto=format&fit=crop" alt="Camisa Oxford Pastel" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Camisa Oxford Pastel</h4>
+                  <p class="product-price">$780</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?q=80&w=600&auto=format&fit=crop" alt="Falda Midi Pastel" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-15%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Falda Midi Pastel</h4>
+                  <p class="product-price">$920 <span class="product-old-price">$1,080</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=600&auto=format&fit=crop" alt="Blazer Floreado Slim" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Blazer Floreado Slim</h4>
+                  <p class="product-price">$1,680</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /primavera -->
+
+        <!-- ══ VERANO ══ -->
+        <div class="season-block" id="season-verano">
+          <div class="season-header">
+            <span class="season-badge">☀️ Verano 2026</span>
+            <h2 class="season-title">Colección <em>Verano</em></h2>
+            <p class="text-muted small">Colores vibrantes, telas ultraligeras y cortes frescos para los días más calurosos del año.</p>
+            <div class="season-divider"></div>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1542295669297-4d352b042bca?q=80&w=600&auto=format&fit=crop" alt="Vestido Playero Blanco" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Vestido Playero Blanco</h4>
+                  <p class="product-price">$1,090</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c?q=80&w=600&auto=format&fit=crop" alt="Short Denim Hombre" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-25%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Short Denim Hombre</h4>
+                  <p class="product-price">$590 <span class="product-old-price">$790</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600&auto=format&fit=crop" alt="Top Cropped Verano" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Top Cropped Verano</h4>
+                  <p class="product-price">$650</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600&auto=format&fit=crop" alt="Polo Piqué Premium" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-20%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Polo Piqué Premium</h4>
+                  <p class="product-price">$680 <span class="product-old-price">$850</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop" alt="Vestido Tirantes Seda" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Vestido Tirantes Seda</h4>
+                  <p class="product-price">$1,890</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?q=80&w=600&auto=format&fit=crop" alt="Swim Short Estampado" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">NIÑOS</p>
+                  <h4 class="product-name">Swim Short Estampado</h4>
+                  <p class="product-price">$450</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=600&auto=format&fit=crop" alt="Conjunto Lino Premium" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-30%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Conjunto Lino Premium</h4>
+                  <p class="product-price">$1,190 <span class="product-old-price">$1,700</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=600&auto=format&fit=crop" alt="Playera Gráfica Fun" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">NIÑOS</p>
+                  <h4 class="product-name">Playera Gráfica Fun</h4>
+                  <p class="product-price">$380</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /verano -->
+
+        <!-- ══ OTOÑO ══ -->
+        <div class="season-block" id="season-otono">
+          <div class="season-header">
+            <span class="season-badge">🍂 Otoño 2026</span>
+            <h2 class="season-title">Colección <em>Otoño</em></h2>
+            <p class="text-muted small">Tonos tierra, tejidos cálidos y capas sofisticadas que abrazan la transición de la temporada.</p>
+            <div class="season-divider"></div>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Gabardina Camel Premium" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Gabardina Camel Premium</h4>
+                  <p class="product-price">$2,890</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?q=80&w=600&auto=format&fit=crop" alt="Chaqueta Cuero Vegano" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-25%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Chaqueta Cuero Vegano</h4>
+                  <p class="product-price">$2,190 <span class="product-old-price">$2,920</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600&auto=format&fit=crop" alt="Suéter Cuello Alto" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Suéter Cuello Alto</h4>
+                  <p class="product-price">$1,290</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=600&auto=format&fit=crop" alt="Abrigo Otoño Infantil" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">NIÑOS</p>
+                  <h4 class="product-name">Abrigo Otoño Infantil</h4>
+                  <p class="product-price">$890</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop" alt="Falda Tweed Midi" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-20%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Falda Tweed Midi</h4>
+                  <p class="product-price">$1,080 <span class="product-old-price">$1,350</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?q=80&w=600&auto=format&fit=crop" alt="Pantalón Cargo Terracota" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Pantalón Cargo Terracota</h4>
+                  <p class="product-price">$1,190</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=600&auto=format&fit=crop" alt="Cardigan Marrón Largo" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Cardigan Marrón Largo</h4>
+                  <p class="product-price">$1,390</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=600&auto=format&fit=crop" alt="Blazer Cuadros Escoceses" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-15%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Blazer Cuadros Escoceses</h4>
+                  <p class="product-price">$1,870 <span class="product-old-price">$2,200</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /otono -->
+
+        <!-- ══ INVIERNO ══ -->
+        <div class="season-block" id="season-invierno">
+          <div class="season-header">
+            <span class="season-badge">❄️ Invierno 2026</span>
+            <h2 class="season-title">Colección <em>Invierno</em></h2>
+            <p class="text-muted small">Abrigos estructurados, tejidos densos y paletas oscuras para enfrentar el frío con elegancia.</p>
+            <div class="season-divider"></div>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=600&auto=format&fit=crop" alt="Abrigo Largo Negro" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Abrigo Largo Negro</h4>
+                  <p class="product-price">$3,490</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Parka Técnica Premium" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-30%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Parka Técnica Premium</h4>
+                  <p class="product-price">$2,450 <span class="product-old-price">$3,500</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1512327428686-371c9578cf25?q=80&w=600&auto=format&fit=crop" alt="Jersey Lana Merino" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Jersey Lana Merino</h4>
+                  <p class="product-price">$1,590</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop" alt="Conjunto Polar Niños" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">NIÑOS</p>
+                  <h4 class="product-name">Conjunto Polar Niños</h4>
+                  <p class="product-price">$980</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Tapado Oversize Gris" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-20%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Tapado Oversize Gris</h4>
+                  <p class="product-price">$2,790 <span class="product-old-price">$3,490</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?q=80&w=600&auto=format&fit=crop" alt="Bufanda Cachemira Pura" class="product-img" loading="lazy" />
+                  <span class="product-tag">Nuevo</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">UNISEX</p>
+                  <h4 class="product-name">Bufanda Cachemira Pura</h4>
+                  <p class="product-price">$890</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=600&auto=format&fit=crop" alt="Camisa Franela Gruesa" class="product-img" loading="lazy" />
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">HOMBRE</p>
+                  <h4 class="product-name">Camisa Franela Gruesa</h4>
+                  <p class="product-price">$980</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="product-card" style="cursor:pointer;">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=600&auto=format&fit=crop" alt="Vestido Punto Caliente" class="product-img" loading="lazy" />
+                  <span class="product-tag product-tag--sale">-25%</span>
+                  <div class="product-actions" onclick="event.stopPropagation();">
+                    <button class="product-action-btn" aria-label="Favoritos"><i class="bi bi-heart"></i></button>
+                    <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-category">MUJER</p>
+                  <h4 class="product-name">Vestido Punto Caliente</h4>
+                  <p class="product-price">$1,380 <span class="product-old-price">$1,840</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /invierno -->
+
+      </div><!-- /seasonView -->
     </div>
   </section>
 
+  <!-- NEWSLETTER -->
   <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-inner">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6">
-            <span class="section-eyebrow" style="color:var(--gold-light)">Únete a X</span>
+            <span class="section-eyebrow" style="color:var(--gold-light)">Únete</span>
             <h2 class="newsletter-title">Sé el primero en<br /><em>conocer las novedades</em></h2>
             <p class="newsletter-sub">Recibe acceso exclusivo a nuevas colecciones, ofertas y eventos especiales.</p>
           </div>
           <div class="col-lg-6">
             <form class="newsletter-form" id="newsletterForm" novalidate>
               <div class="newsletter-input-wrap">
-                <input
-                  type="email"
-                  class="newsletter-input"
-                  placeholder="Tu correo electrónico"
-                  required
-                  aria-label="Correo electrónico"
-                />
-                <button type="submit" class="btn newsletter-submit">
-                  Suscribirme <i class="bi bi-arrow-right ms-1"></i>
-                </button>
+                <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required aria-label="Correo electrónico" />
+                <button type="submit" class="btn newsletter-submit">Suscribirme <i class="bi bi-arrow-right ms-1"></i></button>
               </div>
-              <p class="newsletter-disclaimer">
-                Al suscribirte aceptas nuestra <a href="#">Política de Privacidad</a>.
-              </p>
+              <p class="newsletter-disclaimer">Al suscribirte aceptas nuestra <a href="#">Política de Privacidad</a>.</p>
             </form>
           </div>
         </div>
@@ -296,17 +791,13 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-
       <div class="row gy-5 footer-top">
-
         <div class="col-12 col-md-4 col-lg-3">
           <a href="index.html" class="footer-brand">Tienda de Ropa</a>
-          <p class="footer-tagline">
-            Moda consciente, diseño atemporal.<br />
-            Cada prenda cuenta una historia.
-          </p>
+          <p class="footer-tagline">Moda consciente, diseño atemporal.<br />Cada prenda cuenta una historia.</p>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -315,7 +806,6 @@
             <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2 offset-lg-1">
           <h6 class="footer-col-title">Tienda</h6>
           <ul class="footer-links">
@@ -326,29 +816,26 @@
             <li><a href="ofertas.html">Ofertas</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Ayuda</h6>
           <ul class="footer-links">
-            <li><a href="#">Centro de Ayuda</a></li>
-            <li><a href="#">Seguimiento de Pedido</a></li>
-            <li><a href="#">Devoluciones</a></li>
-            <li><a href="#">Guía de Tallas</a></li>
-            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalCentroAyuda">Centro de Ayuda</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguimiento">Seguimiento de Pedido</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalDevoluciones">Devoluciones</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalGuiaTallas">Guía de Tallas</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">Contáctanos</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Empresa</h6>
           <ul class="footer-links">
             <li><a href="#">Sobre Nosotros</a></li>
             <li><a href="#">Sustentabilidad</a></li>
             <li><a href="#">Trabaja con Nosotros</a></li>
-            <li><a href="login.html" class="footer-link">Afiliados</a></li>
+            <li><a href="login.html">Afiliados</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-col-title">Contacto</h6>
           <ul class="footer-links footer-contact">
@@ -358,48 +845,37 @@
             <li><i class="bi bi-clock me-2"></i>Lun–Sáb: 10:00–20:00</li>
           </ul>
         </div>
-
-      </div><div class="footer-bottom">
+      </div>
+      <div class="footer-bottom">
         <div class="row align-items-center gy-2">
           <div class="col-md-6 text-center text-md-start">
-            <p class="footer-copy">
-              &copy; 2026 ejemolo Alta Moda. Todos los derechos reservados.
-            </p>
+            <p class="footer-copy">&copy; 2026 Tienda de Ropa Alta Moda. Todos los derechos reservados.</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <div class="footer-legal">
-              <a href="#">Aviso de Privacidad</a>
-              <span class="footer-legal-sep">·</span>
-              <a href="#">Términos y Condiciones</a>
-              <span class="footer-legal-sep">·</span>
+              <a href="#">Aviso de Privacidad</a><span class="footer-legal-sep">·</span>
+              <a href="#">Términos y Condiciones</a><span class="footer-legal-sep">·</span>
               <a href="#">Cookies</a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
-    <i class="bi bi-arrow-up"></i>
-  </button>
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
   <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
     <div id="settingsToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
-        <div class="toast-body">
-          <i class="bi bi-check-circle me-2"></i> Cambios guardados correctamente.
-        </div>
+        <div class="toast-body"><i class="bi bi-check-circle me-2"></i> Cambios guardados correctamente.</div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="src/js/main.js"></script>
-
-  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+  <!-- Modal Producto -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content rounded-0">
         <div class="modal-header border-0">
@@ -408,30 +884,27 @@
         <div class="modal-body p-4 pt-0">
           <div class="row g-4">
             <div class="col-md-6">
-              <img src="" id="modalProductImg" class="img-fluid w-100" style="object-fit: cover; height: 450px;" alt="Producto">
+              <img src="" id="modalProductImg" class="img-fluid w-100" style="object-fit:cover;height:450px;" alt="Producto">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
-              <span class="text-muted small text-uppercase tracking-wider" id="modalProductCategory">CATEGORÍA</span>
-              <h3 class="display-6 my-2" id="modalProductName">Nombre del Producto</h3>
+              <span class="text-muted small text-uppercase" id="modalProductCategory">CATEGORÍA</span>
+              <h3 class="display-6 my-2" id="modalProductName">Nombre</h3>
               <p class="fs-4 text-dark mb-4" id="modalProductPrice">$0.00</p>
-              <p class="text-muted mb-4 small">Esta prenda de alta costura ha sido confeccionada con materiales sustentables premium de nuestra línea de temporada. Ajuste perfecto de diseño contemporáneo.</p>
-              
+              <p class="text-muted mb-4 small">Esta prenda ha sido confeccionada con materiales sustentables premium de nuestra línea de temporada.</p>
               <div class="mb-3">
-                <label for="modalProductSize" class="form-label text-uppercase tracking-wider small text-muted shadow-none" style="font-size: 0.7rem; letter-spacing: 1px;">Seleccionar Talla</label>
-                <select class="form-select rounded-0" id="modalProductSize" style="font-family: 'Jost'; font-size: 0.85rem;">
+                <label class="form-label text-uppercase small text-muted" style="font-size:.7rem;letter-spacing:1px;">Seleccionar Talla</label>
+                <select class="form-select rounded-0" id="modalProductSize" style="font-family:'Jost';font-size:.85rem;">
                   <option value="S">S — Chica</option>
                   <option value="M" selected>M — Mediana</option>
                   <option value="L">L — Grande</option>
                   <option value="XL">XL — Extra Grande</option>
                 </select>
               </div>
-
               <div class="mb-4">
-                <label for="modalProductQty" class="form-label text-uppercase tracking-wider small text-muted" style="font-size: 0.7rem; letter-spacing: 1px;">Cantidad</label>
-                <input type="number" class="form-control rounded-0" id="modalProductQty" value="1" min="1" style="width: 90px; font-family: 'Jost'; font-size: 0.85rem;">
+                <label class="form-label text-uppercase small text-muted" style="font-size:.7rem;letter-spacing:1px;">Cantidad</label>
+                <input type="number" class="form-control rounded-0" id="modalProductQty" value="1" min="1" style="width:90px;font-family:'Jost';font-size:.85rem;">
               </div>
-              
-              <button id="modalBtnAddToCart" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase tracking-wider">
+              <button id="modalBtnAddToCart" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase">
                 <i class="bi bi-bag-plus me-2"></i> Añadir a la Bolsa
               </button>
             </div>
@@ -440,6 +913,290 @@
       </div>
     </div>
   </div>
+
+  <!-- Modales de Ayuda (mismos que en index.html) -->
+  <div class="modal fade" id="modalCentroAyuda" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;"><i class="bi bi-question-circle me-2" style="color:var(--gold)"></i>Centro de Ayuda</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Encuentra respuestas a las preguntas más frecuentes.</p>
+          <div class="accordion accordion-flush" id="faqAccordion2">
+            <div class="accordion-item border-top">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1b">¿Cuánto tarda en llegar mi pedido?</button></h2>
+              <div id="faq1b" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-muted small">Los pedidos estándar se entregan en 3 a 5 días hábiles dentro de la CDMX. Para el interior de la república, entre 5 y 8 días hábiles.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2b">¿Puedo cambiar mi talla después de la compra?</button></h2>
+              <div id="faq2b" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-muted small">Sí, tienes hasta 30 días naturales desde la recepción del pedido para solicitar un cambio de talla.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3b">¿Qué métodos de pago aceptan?</button></h2>
+              <div id="faq3b" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-muted small">Aceptamos tarjetas Visa, Mastercard, AmEx, PayPal, transferencia bancaria y efectivo en OXXO.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalSeguimiento" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;"><i class="bi bi-box-seam me-2" style="color:var(--gold)"></i>Seguimiento de Pedido</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Ingresa tu número de pedido para conocer el estado de tu envío.</p>
+          <div class="mb-3">
+            <label class="form-label text-uppercase small text-muted" style="font-size:.72rem;letter-spacing:1px;">Número de Pedido</label>
+            <input type="text" class="form-control rounded-0" id="trackingOrderInput2" placeholder="Ej. MX-2026-00123" style="font-family:'Jost'">
+          </div>
+          <div class="mb-4">
+            <label class="form-label text-uppercase small text-muted" style="font-size:.72rem;letter-spacing:1px;">Correo Electrónico</label>
+            <input type="email" class="form-control rounded-0" id="trackingEmailInput2" placeholder="tucorreo@ejemplo.com" style="font-family:'Jost'">
+          </div>
+          <button class="btn btn-dark w-100 rounded-0 py-2 text-uppercase" style="letter-spacing:.1em;font-size:.8rem;" id="btnBuscarPedido2">
+            <i class="bi bi-search me-2"></i>Buscar Pedido
+          </button>
+          <div id="trackingResult2" class="mt-4 d-none">
+            <div class="border p-3" style="border-left:3px solid var(--gold)!important;">
+              <p class="small mb-1 text-muted text-uppercase" style="letter-spacing:.08em;">Estado del pedido</p>
+              <h6 style="font-family:'Cormorant Garamond',serif;">📦 En camino — Estimado: 2 días hábiles</h6>
+              <p class="small text-muted mb-0">Tu pedido salió de nuestro almacén y está en ruta con el servicio de mensajería.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDevoluciones" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;"><i class="bi bi-arrow-return-left me-2" style="color:var(--gold)"></i>Política de Devoluciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-md-6"><div class="p-3 h-100" style="background:#f8f4ef;border-left:3px solid var(--gold);">
+              <h6 class="text-uppercase mb-3" style="font-size:.75rem;">✅ Lo que sí aceptamos</h6>
+              <ul class="small text-muted ps-3">
+                <li class="mb-2">Prendas sin usar, con etiquetas originales</li>
+                <li class="mb-2">Artículos recibidos en los últimos <strong>30 días</strong></li>
+                <li class="mb-2">Defectos de fabricación (cualquier tiempo)</li>
+              </ul>
+            </div></div>
+            <div class="col-md-6"><div class="p-3 h-100" style="background:#fff5f5;border-left:3px solid #b84040;">
+              <h6 class="text-uppercase mb-3" style="font-size:.75rem;">❌ Lo que NO aceptamos</h6>
+              <ul class="small text-muted ps-3">
+                <li class="mb-2">Prendas usadas, lavadas o alteradas</li>
+                <li class="mb-2">Artículos en oferta final</li>
+                <li class="mb-2">Pedidos con más de 30 días</li>
+              </ul>
+            </div></div>
+          </div>
+          <div class="mt-4 text-center">
+            <a href="mailto:devoluciones@ejemplo.mx" class="btn btn-dark rounded-0 px-4"><i class="bi bi-envelope me-2"></i>Iniciar Devolución por Correo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalGuiaTallas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;"><i class="bi bi-rulers me-2" style="color:var(--gold)"></i>Guía de Tallas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Todas las medidas están en centímetros (cm).</p>
+          <ul class="nav nav-tabs mb-3" id="tallasTab2" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tallaMujer2" style="font-family:'Jost';font-size:.8rem;">Mujer</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tallaHombre2" style="font-family:'Jost';font-size:.8rem;">Hombre</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tallaNinos2" style="font-family:'Jost';font-size:.8rem;">Niños</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tallaMujer2">
+              <table class="table table-sm table-bordered text-center small">
+                <thead style="background:var(--charcoal);color:#fff;"><tr><th>Talla</th><th>Busto</th><th>Cintura</th><th>Cadera</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>XS</strong></td><td>80–84</td><td>60–64</td><td>86–90</td></tr>
+                  <tr><td><strong>S</strong></td><td>84–88</td><td>64–68</td><td>90–94</td></tr>
+                  <tr><td><strong>M</strong></td><td>88–92</td><td>68–72</td><td>94–98</td></tr>
+                  <tr><td><strong>L</strong></td><td>92–96</td><td>72–76</td><td>98–102</td></tr>
+                  <tr><td><strong>XL</strong></td><td>96–100</td><td>76–80</td><td>102–106</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="tallaHombre2">
+              <table class="table table-sm table-bordered text-center small">
+                <thead style="background:var(--charcoal);color:#fff;"><tr><th>Talla</th><th>Pecho</th><th>Cintura</th><th>Cadera</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>S</strong></td><td>88–92</td><td>74–78</td><td>90–94</td></tr>
+                  <tr><td><strong>M</strong></td><td>92–96</td><td>78–82</td><td>94–98</td></tr>
+                  <tr><td><strong>L</strong></td><td>96–100</td><td>82–86</td><td>98–102</td></tr>
+                  <tr><td><strong>XL</strong></td><td>100–104</td><td>86–90</td><td>102–106</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="tallaNinos2">
+              <table class="table table-sm table-bordered text-center small">
+                <thead style="background:var(--charcoal);color:#fff;"><tr><th>Talla</th><th>Edad</th><th>Altura</th><th>Pecho</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>4T</strong></td><td>4 años</td><td>99–107</td><td>56–58</td></tr>
+                  <tr><td><strong>6</strong></td><td>5–6 años</td><td>112–119</td><td>60–62</td></tr>
+                  <tr><td><strong>8</strong></td><td>7–8 años</td><td>122–129</td><td>64–66</td></tr>
+                  <tr><td><strong>10</strong></td><td>9–10 años</td><td>132–139</td><td>68–70</td></tr>
+                  <tr><td><strong>12</strong></td><td>11–12 años</td><td>142–149</td><td>72–74</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;"><i class="bi bi-chat-dots me-2" style="color:var(--gold)"></i>Contáctanos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-4">Nuestro equipo responde en menos de 24 horas en días hábiles.</p>
+          <div class="mb-3">
+            <label class="form-label text-uppercase small text-muted" style="font-size:.72rem;letter-spacing:1px;">Nombre Completo</label>
+            <input type="text" class="form-control rounded-0" id="contactNombre2" placeholder="Tu nombre" style="font-family:'Jost'">
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-uppercase small text-muted" style="font-size:.72rem;letter-spacing:1px;">Correo Electrónico</label>
+            <input type="email" class="form-control rounded-0" id="contactEmail2" placeholder="tucorreo@ejemplo.com" style="font-family:'Jost'">
+          </div>
+          <div class="mb-4">
+            <label class="form-label text-uppercase small text-muted" style="font-size:.72rem;letter-spacing:1px;">Mensaje</label>
+            <textarea class="form-control rounded-0" rows="4" id="contactMensaje2" placeholder="Describe tu consulta..." style="font-family:'Jost';font-size:.85rem;"></textarea>
+          </div>
+          <button class="btn btn-dark w-100 rounded-0 py-2 text-uppercase" style="letter-spacing:.1em;font-size:.8rem;" id="btnEnviarContacto2">
+            <i class="bi bi-send me-2"></i>Enviar Mensaje
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="src/js/main.js"></script>
+
+  <!-- Controlador de temporadas -->
+  <script>
+    (function() {
+      const urlParams      = new URLSearchParams(window.location.search);
+      const temporadaParam = urlParams.get('temporada');
+      const catParam       = urlParams.get('cat');
+      const catView        = document.getElementById('catView');
+      const seasonView     = document.getElementById('seasonView');
+      const filterBar      = document.getElementById('filterBar');
+
+      const labels = {
+        cat: {
+          novedades: { eyebrow:'Recién Llegado', title:'Últimas Novedades' },
+          mujer:     { eyebrow:'Descubre',       title:'Colección Mujer' },
+          hombre:    { eyebrow:'Descubre',       title:'Colección Hombre' },
+          ninos:     { eyebrow:'Descubre',       title:'Colección Niños' }
+        },
+        temporada: {
+          primavera: { eyebrow:'Temporada', title:'Colección Primavera 2026' },
+          verano:    { eyebrow:'Temporada', title:'Colección Verano 2026' },
+          otono:     { eyebrow:'Temporada', title:'Colección Otoño 2026' },
+          invierno:  { eyebrow:'Temporada', title:'Colección Invierno 2026' }
+        }
+      };
+
+      function setHeader(type, value) {
+        const info = labels[type]?.[value];
+        if (info) {
+          document.getElementById('collectionEyebrow').textContent = info.eyebrow;
+          document.getElementById('collectionTitle').textContent   = info.title;
+        }
+      }
+
+      function markActive(type, value) {
+        filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.toggle('active',
+            btn.getAttribute('data-filter') === type && btn.getAttribute('data-value') === value);
+        });
+      }
+
+      function showSeason(season) {
+        catView.style.display    = 'none';
+        seasonView.style.display = 'block';
+        document.querySelectorAll('.season-block').forEach(b => b.classList.remove('visible'));
+        document.getElementById('season-' + season)?.classList.add('visible');
+        setHeader('temporada', season);
+        markActive('temporada', season);
+      }
+
+      function showCat(cat) {
+        catView.style.display    = 'block';
+        seasonView.style.display = 'none';
+        setHeader('cat', cat || 'novedades');
+        markActive('cat', cat || 'novedades');
+      }
+
+      // Inicializar según URL
+      if (temporadaParam) { showSeason(temporadaParam); }
+      else                { showCat(catParam || 'novedades'); }
+
+      // Botones de filtro
+      filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const type  = this.getAttribute('data-filter');
+          const value = this.getAttribute('data-value');
+          if (type === 'temporada') {
+            history.pushState({}, '', '?temporada=' + value);
+            showSeason(value);
+          } else {
+            history.pushState({}, '', '?cat=' + value);
+            showCat(value);
+            window.dispatchEvent(new CustomEvent('filterChanged', { detail: { cat: value } }));
+          }
+        });
+      });
+
+      // Modales de ayuda en esta página
+      document.getElementById('btnBuscarPedido2')?.addEventListener('click', function() {
+        const order = document.getElementById('trackingOrderInput2').value.trim();
+        const email = document.getElementById('trackingEmailInput2').value.trim();
+        if (order && email) document.getElementById('trackingResult2').classList.remove('d-none');
+      });
+      document.getElementById('btnEnviarContacto2')?.addEventListener('click', function() {
+        const nombre  = document.getElementById('contactNombre2').value.trim();
+        const email   = document.getElementById('contactEmail2').value.trim();
+        const mensaje = document.getElementById('contactMensaje2').value.trim();
+        if (nombre && email && mensaje) {
+          this.innerHTML = '<i class="bi bi-check-circle me-2"></i>¡Mensaje enviado!';
+          this.classList.replace('btn-dark','btn-success');
+          this.disabled = true;
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
