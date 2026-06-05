@@ -808,6 +808,18 @@ img { display: block; width: 100%; }
   color: var(--charcoal);
   margin: 0 0 .25rem;
 }
+.product-description-snippet {
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: .75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
 .product-price {
   font-family: var(--font-body);
   font-size: .85rem;

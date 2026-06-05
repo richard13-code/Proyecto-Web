@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Blazer Slim Fit",
+    "price": 1890,
+    "oldPrice": 2400,
+    "category": "hombre",
+    "season": "primavera",
+    "isNew": true,
+    "image": "src/img/producto-1.jpg",
+    "description": "Blazer elegante de corte ajustado, confeccionado con tejidos de alta calidad para un look sofisticado en eventos formales."
+  },
+  {
+    "id": 2,
+    "name": "Vestido Floral Midi",
+    "price": 1250,
+    "oldPrice": null,
+    "category": "mujer",
+    "season": "primavera",
+    "isNew": false,
+    "image": "src/img/producto-2.jpg",
+    "description": "Vestido midi con estampado floral delicado y tela ligera, ideal para los días soleados y paseos primaverales."
+  },
+  {
+    "id": 3,
+    "name": "Conjunto Verano",
+    "price": 680,
+    "oldPrice": 850,
+    "category": "ninos",
+    "season": "verano",
+    "isNew": false,
+    "image": "src/img/producto-3.jpg",
+    "description": "Conjunto fresco de dos piezas para niños, diseñado para ofrecer máxima libertad de movimiento y comodidad durante el verano."
+  },
+  {
+    "id": 4,
+    "name": "Gabardina Clásica",
+    "price": 2990,
+    "oldPrice": null,
+    "category": "mujer",
+    "season": "otono",
+    "isNew": true,
+    "image": "src/img/producto-4.jpg",
+    "description": "Gabardina clásica con cinturón ajustable y acabado resistente al viento, un básico imprescindible para la temporada de otoño."
+  },
+  {
+    "id": 5,
+    "name": "Camisa Casual Algodón",
+    "price": 850,
+    "oldPrice": 1100,
+    "category": "hombre",
+    "season": "otono",
+    "isNew": true,
+    "image": "src/img/camisa_algodon.webp",
+    "description": "Camisa de algodón 100% con textura suave y diseño versátil, perfecta para combinar con un estilo casual o refinado."
+  },
+  {
+    "id": 6,
+    "name": "Sudadera Animada Infantil",
+    "price": 520,
+    "oldPrice": null,
+    "category": "ninos",
+    "season": "invierno",
+    "isNew": true,
+    "image": "src/img/sudadera.jpg",
+    "description": "Sudadera suave con gráficos animados y forro térmico, ideal para mantener a los más pequeños abrigados y cómodos."
+  },
+  { "id": 7, "name": "Vestido Largo de Seda", "category": "mujer", "season": "verano", "price": 2499, "isNew": true, "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop", "description": "Confeccionado en seda pura con una caída fluida excepcional, tirantes finos ajustables y escote elegante para eventos de gala nocturnos." },
+  { "id": 9, "name": "Chaqueta Denim Oversize", "category": "mujer", "season": "primavera", "price": 1499, "isNew": true, "image": "https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?q=80&w=600&auto=format&fit=crop", "description": "Mezclilla rígida premium de alta durabilidad con lavado vintage claro, bolsillos funcionales y un corte relajado de silueta urbana." },
+  { "id": 10, "name": "Pantalón Sastrero Palazzo", "category": "mujer", "season": "primavera", "price": 1199, "isNew": false, "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=600&auto=format&fit=crop", "description": "Corte de tiro alto con pinzas frontales pronunciadas que alargan la silueta. Ideal para un look de oficina sofisticado o semiformal." },
+  { "id": 11, "name": "Falda Midi Plisada Satinada", "category": "mujer", "season": "otono", "price": 950, "oldPrice": 1350, "isNew": false, "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop", "description": "Tejido satinado de brillo suave con pliegues perfectos que generan movimiento. Cintura elástica adaptable para máxima comodidad." },
+  { "id": 12, "name": "Ensamble de Punto Fino", "category": "mujer", "season": "otono", "price": 1250, "isNew": true, "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=600&auto=format&fit=crop", "description": "Tejido de punto premium ultra suave, silueta abierta sin botones y caída asimétrica. Una prenda versátil para capas de media estación." }
+]  

@@ -20,7 +20,7 @@ export const SCROLL_CONFIG = {
 
 // Configuración de la API y el Carrito por Cookies
 export const API_CONFIG = {
-  PRODUCTS_URL: 'src/js/productos.json'
+  PRODUCTS_URL: 'https://223640d471274e32ba92d3ead0c3e2ae.api.mockbin.io'
 };
 
 export const COOKIE_CONFIG = {

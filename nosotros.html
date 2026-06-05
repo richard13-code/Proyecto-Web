@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Ropa — Alta Moda</title>
+  <title>Tienda de Ropa — Nosotros</title>
 
   <!-- Bootstrap 5 CSS -->
   <link
@@ -27,24 +27,17 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════════ -->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
     <div class="container-fluid px-4">
-
-      <!-- Brand -->
       <a class="navbar-brand" href="index.html">
         <span class="brand-word">Tienda de Ropa</span>
       </a>
 
-      <!-- Mobile: cart + settings toggle -->
       <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
         <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito">
           <i class="bi bi-bag"></i>
-          <span class="cart-badge">0</span>
+          <span class="cart-badge">3</span>
         </a>
-        <!-- Settings offcanvas trigger (mobile) -->
         <button
           class="nav-icon-btn"
           type="button"
@@ -57,7 +50,6 @@
         </button>
       </div>
 
-      <!-- Hamburger for main menu -->
       <button
         class="navbar-toggler"
         type="button"
@@ -72,13 +64,10 @@
         <span class="hamburger-line"></span>
       </button>
 
-      <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="navbarMain">
-
-        <!-- Nav links (left of search) -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -92,18 +81,17 @@
               <li><a class="dropdown-item" href="coleccion.html?cat=mujer">Mujer</a></li>
               <li><a class="dropdown-item" href="coleccion.html?cat=ninos">Niños</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#coleccion.html?cat=novedades">Novedades</a></li>
+              <li><a class="dropdown-item" href="coleccion.html?cat=novedades">Novedades</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ofertas.html">Ofertas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="nosotros.html">Nosotros</a>
+            <a class="nav-link active" href="nosotros.html">Nosotros</a>
           </li>
         </ul>
 
-        <!-- Search bar -->
         <form class="search-form d-flex align-items-center me-lg-3 my-2 my-lg-0" role="search" id="searchForm">
           <div class="search-wrapper">
             <input
@@ -119,14 +107,11 @@
           </div>
         </form>
 
-        <!-- Desktop: cart + settings -->
         <div class="d-none d-lg-flex align-items-center gap-3">
           <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito de compras">
             <i class="bi bi-bag"></i>
-            <span class="cart-badge">0</span>
+            <span class="cart-badge">3</span>
           </a>
-
-          <!-- Settings offcanvas trigger (desktop) -->
           <button
             class="nav-icon-btn settings-btn"
             type="button"
@@ -138,14 +123,10 @@
             <i class="bi bi-sliders2"></i>
           </button>
         </div>
-
-      </div><!-- /collapse -->
+      </div>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════
-       SETTINGS OFFCANVAS (Menú hamburguesa de Config.)
-  ═══════════════════════════════════════════════ -->
   <div
     class="offcanvas offcanvas-end offcanvas-settings"
     tabindex="-1"
@@ -164,8 +145,6 @@
       ></button>
     </div>
     <div class="offcanvas-body">
-
-      <!-- Dark mode -->
       <div class="settings-section">
         <h6 class="settings-section-title">Apariencia</h6>
         <div class="setting-row">
@@ -186,7 +165,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Language -->
       <div class="settings-section">
         <h6 class="settings-section-title">Idioma y Región</h6>
         <div class="setting-row flex-column align-items-start gap-2">
@@ -210,7 +188,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Account -->
       <div class="settings-section">
         <h6 class="settings-section-title">Cuenta</h6>
         <div class="d-flex flex-column gap-2">
@@ -223,7 +200,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Notifications -->
       <div class="settings-section">
         <h6 class="settings-section-title">Notificaciones</h6>
         <div class="setting-row">
@@ -240,236 +216,205 @@
         </div>
       </div>
 
-      <!-- Save button -->
       <button class="btn btn-settings-save w-100 mt-4" id="saveSettings">
         Guardar Cambios
       </button>
-
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════
-       SECTION: FEATURES BAR
-  ═══════════════════════════════════════════════ -->
-  <section class="features-bar">
-    <div class="container-fluid">
-      <div class="row g-0">
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-truck"></i>
-          <span>Envío Gratis +$1,500</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-arrow-return-left"></i>
-          <span>Devoluciones 30 días</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-shield-check"></i>
-          <span>Pago 100% Seguro</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-headset"></i>
-          <span>Soporte 24/7</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- ═══════════════════════════════════════════════
-       SECTION: DESGLOSE CUENTA CARRITO
-  ═══════════════════════════════════════════════ -->
-<section class="cart-section py-5" style="margin-top: 100px;">
+  <section class="hero-section py-5">
     <div class="container">
-      <div class="text-center mb-5">
-        <span class="text-uppercase tracking-wider text-muted small">Tu Bolsa</span>
-        <h2 class="display-5">Carrito de Compras</h2>
-      </div>
-
-      <div class="row g-5">
-        <div class="col-lg-8">
-          <div class="table-responsive">
-            <table class="table align-middle">
-            <thead>
-              <tr>
-                <th scope="col" class="border-0 text-muted small text-uppercase">Producto</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-center">Talla</th> <th scope="col" class="border-0 text-muted small text-uppercase text-center">Cantidad</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-end">Precio</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-end">Eliminar</th>
-              </tr>
-            </thead>
-              <tbody id="cartTableBody">
-                </tbody>
-            </table>
-          </div>
-          <div id="emptyCartMessage" class="text-center py-5 d-none">
-            <i class="bi bi-bag-x display-1 text-muted mb-3 d-block"></i>
-            <p class="lead">Tu carrito está vacío.</p>
-            <a href="coleccion.html?cat=novedades" class="btn btn-dark px-4 rounded-0">Ver Novedades</a>
-          </div>
+      <div class="row gy-5">
+        <div class="col-lg-12 text-center">
+          <span class="section-eyebrow">Nuestra historia</span>
+          <h1 class="section-title">Fundamos esta tienda para llevar moda con propósito</h1>
+          <p class="section-subtitle mx-auto">
+            Desde nuestros inicios buscamos crear prendas con identidad, diseñadas para durar y pensadas para quienes valoran estilo, calidad y responsabilidad.
+          </p>
         </div>
-
+      </div>
+      <div class="row g-4 mt-4">
         <div class="col-lg-4">
-          <div class="bg-light p-4 border">
-            <h3 class="h5 mb-4 text-uppercase tracking-wider">Resumen del Pedido</h3>
-            <div class="d-flex justify-content-between mb-3">
-              <span class="text-muted">Subtotal</span>
-              <span id="cartSubtotal">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between mb-3">
-              <span class="text-muted">Envío</span>
-              <span class="text-success small">Gratis</span>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between mb-4">
-              <strong class="text-uppercase">Total</strong>
-              <strong id="cartTotal" class="fs-5">$0.00</strong>
-            </div>
-            <button id="btnCheckout" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase tracking-wider">
-              Proceder al Pago
-            </button>
+          <div class="about-card p-4 h-100">
+            <h3>Origen</h3>
+            <p>
+              Abrimos en 2018 con la meta de ofrecer moda auténtica, con piezas que combinaran elegancia, confort y materiales confiables.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="about-card p-4 h-100">
+            <h3>Objetivo</h3>
+            <p>
+              Queremos que cada cliente encuentre ropa que lo haga sentir seguro, cómodo y con estilo, sin sacrificar la calidad.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="about-card p-4 h-100">
+            <h3>Valores</h3>
+            <p>
+              Trabajamos con responsabilidad, transparencia y una atención cercana para que tu experiencia con la marca sea siempre positiva.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════
-       SECTION: PRODUCTOS DESTACADOS
-  ═══════════════════════════════════════════════ -->
-  <section class="featured-section">
+  <section class="about-section py-5 bg-light">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">Lo Más Visto</span>
-        <h2 class="section-title">Productos Destacados</h2>
-      </div>
-      <div class="row g-3">
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-1.jpg" alt="Blazer Slim" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-              <span class="product-tag">Nuevo</span>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Hombre</p>
-              <h4 class="product-name">Blazer Slim Fit</h4>
-              <p class="product-price">$1,890 <span class="product-old-price">$2,400</span></p>
-            </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="about-card p-4 h-100">
+            <h2>Cómo comenzó todo</h2>
+            <p>
+              En 2018 abrimos las puertas de nuestra primera tienda con la idea de ofrecer ropa que hablara de autenticidad. Comenzamos con una selección cuidada de prendas que combinaban corte moderno y materiales confiables.
+            </p>
+            <p>
+              Desde entonces, cada colección se ha creado con el mismo cuidado: piezas versátiles, colores atemporales y acabados que reflejan pasión por la moda.
+            </p>
           </div>
         </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-2.jpg" alt="Vestido Floral" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Mujer</p>
-              <h4 class="product-name">Vestido Floral Midi</h4>
-              <p class="product-price">$1,250</p>
-            </div>
+        <div class="col-lg-6">
+          <div class="about-card p-4 h-100">
+            <h2>Nuestros objetivos</h2>
+            <p>
+              Nuestro principal objetivo es que cada cliente encuentre ropa que lo haga sentir cómodo y seguro. Trabajamos para que la experiencia de compra sea clara, cercana y libre de complicaciones.
+            </p>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-gold me-2"></i>Ofrecer prendas duraderas y con estilo.</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-gold me-2"></i>Impulsar prácticas responsables en la producción.</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-gold me-2"></i>Construir relaciones de confianza con nuestros clientes.</li>
+            </ul>
           </div>
         </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-3.jpg" alt="Conjunto Niños" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-              <span class="product-tag product-tag--sale">−20%</span>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Niños</p>
-              <h4 class="product-name">Conjunto Verano</h4>
-              <p class="product-price">$680 <span class="product-old-price">$850</span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-4.jpg" alt="Gabardina" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Mujer</p>
-              <h4 class="product-name">Gabardina Clásica</h4>
-              <p class="product-price">$2,990</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════
-       SECTION: NEWSLETTER
-  ═══════════════════════════════════════════════ -->
-  <section class="newsletter-section">
+  <section class="mission-section py-5">
     <div class="container">
-      <div class="newsletter-inner">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-6">
-            <span class="section-eyebrow" style="color:var(--gold-light)">Únete a X</span>
-            <h2 class="newsletter-title">Sé el primero en<br /><em>conocer las novedades</em></h2>
-            <p class="newsletter-sub">Recibe acceso exclusivo a nuevas colecciones, ofertas y eventos especiales.</p>
+      <div class="row justify-content-center gy-4">
+        <div class="col-lg-5">
+          <div class="feature-item p-4 h-100 text-center bg-white text-dark shadow-sm">
+            <i class="bi bi-lightbulb-fill"></i>
+            <h3>Misión</h3>
+            <p>
+              Inspirar confianza en cada persona a través de ropa elegante y cómoda, creada con conciencia ambiental y compromiso social.
+            </p>
           </div>
-          <div class="col-lg-6">
-            <form class="newsletter-form" id="newsletterForm" novalidate>
-              <div class="newsletter-input-wrap">
-                <input
-                  type="email"
-                  class="newsletter-input"
-                  placeholder="Tu correo electrónico"
-                  required
-                  aria-label="Correo electrónico"
-                />
-                <button type="submit" class="btn newsletter-submit">
-                  Suscribirme <i class="bi bi-arrow-right ms-1"></i>
-                </button>
-              </div>
-              <p class="newsletter-disclaimer">
-                Al suscribirte aceptas nuestra <a href="#">Política de Privacidad</a>.
-              </p>
-            </form>
+        </div>
+        <div class="col-lg-5">
+          <div class="feature-item p-4 h-100 text-center bg-white text-dark shadow-sm">
+            <i class="bi bi-binoculars-fill"></i>
+            <h3>Visión</h3>
+            <p>
+              Ser reconocidos como una marca que une moda accesible con valores reales: sostenibilidad, estilo y cercanía con la comunidad.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════ -->
+  <section class="timeline-section py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-eyebrow">Nuestro recorrido</span>
+        <h2 class="section-title">Cómo se ha construido la marca</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="timeline-card p-4 h-100">
+            <span class="timeline-badge">2018</span>
+            <h5>Primer local</h5>
+            <p>
+              Abrimos con una propuesta directa: ofrecer prendas elegantes sin renunciar a comodidad y precio justo.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="timeline-card p-4 h-100">
+            <span class="timeline-badge">2021</span>
+            <h5>Expansión digital</h5>
+            <p>
+              Lanzamos nuestra tienda en línea para estar más cerca de clientes de todo el país y llevar nuestras colecciones a más personas.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="timeline-card p-4 h-100">
+            <span class="timeline-badge">2024</span>
+            <h5>Compromiso sostenible</h5>
+            <p>
+              Incrementamos el uso de materiales responsables y reforzamos prácticas de producción más éticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-eyebrow">Nosotros</span>
+        <h2 class="section-title">El equipo detrás de la tienda</h2>
+        <p class="section-subtitle">Un grupo de diseñadores, compradores y asesores unidos por una misma pasión: la moda con sentido.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="team-card p-4 h-100 text-center">
+            <div class="team-avatar mb-3"><i class="bi bi-person-circle"></i></div>
+            <h5>Mariana</h5>
+            <p>Fundadora y directora creativa, responsable de las colecciones y el estilo de la marca.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card p-4 h-100 text-center">
+            <div class="team-avatar mb-3"><i class="bi bi-person-circle"></i></div>
+            <h5>Carlos</h5>
+            <p>Encargado de operaciones y compras, asegura que cada prenda llegue con calidad y tiempos justos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card p-4 h-100 text-center">
+            <div class="team-avatar mb-3"><i class="bi bi-person-circle"></i></div>
+            <h5>Laura</h5>
+            <p>Responsable de atención al cliente y experiencias de compra memorables.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="callout-section py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8">
+          <h2 class="section-title">Tu estilo es nuestra inspiración</h2>
+          <p class="section-subtitle">
+            Trabajamos cada día para que tu armario refleje tu mejor versión, con piezas cómodas, modernas y hechas para durar.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="coleccion.html?cat=hombre" class="btn btn-category btn-category--dark me-2">Ver Hombre</a>
+          <a href="coleccion.html?cat=mujer" class="btn btn-category btn-category--light">Ver Mujer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
-
-      <!-- Footer top -->
       <div class="row gy-5 footer-top">
-
-        <!-- Brand column -->
         <div class="col-12 col-md-4 col-lg-3">
           <a href="index.html" class="footer-brand">Tienda de Ropa</a>
           <p class="footer-tagline">
             Moda consciente, diseño atemporal.<br />
             Cada prenda cuenta una historia.
           </p>
-          <!-- Social icons -->
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -478,19 +423,16 @@
             <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-
-        <!-- Links columns -->
         <div class="col-6 col-md-2 col-lg-2 offset-lg-1">
           <h6 class="footer-col-title">Tienda</h6>
           <ul class="footer-links">
-            <li><a href="#coleccion.html?cat=mujer">Mujer</a></li>
-            <li><a href="#coleccion.html?cat=hombre">Hombre</a></li>
-            <li><a href="#coleccion.html?cat=ninos">Niños</a></li>
-            <li><a href="#coleccion.html?cat=novedades">Novedades</a></li>
-            <li><a href="#">Ofertas</a></li>
+            <li><a href="coleccion.html?cat=mujer">Mujer</a></li>
+            <li><a href="coleccion.html?cat=hombre">Hombre</a></li>
+            <li><a href="coleccion.html?cat=ninos">Niños</a></li>
+            <li><a href="coleccion.html?cat=novedades">Novedades</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Ayuda</h6>
           <ul class="footer-links">
@@ -501,7 +443,6 @@
             <li><a href="#">Contáctanos</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Empresa</h6>
           <ul class="footer-links">
@@ -512,8 +453,6 @@
             <li><a href="#">Blog</a></li>
           </ul>
         </div>
-
-        <!-- Contact column -->
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-col-title">Contacto</h6>
           <ul class="footer-links footer-contact">
@@ -523,16 +462,11 @@
             <li><i class="bi bi-clock me-2"></i>Lun–Sáb: 10:00–20:00</li>
           </ul>
         </div>
-
-      </div><!-- /footer-top -->
-
-      <!-- Footer bottom -->
+      </div>
       <div class="footer-bottom">
         <div class="row align-items-center gy-2">
           <div class="col-md-6 text-center text-md-start">
-            <p class="footer-copy">
-              &copy; 2026 ejemolo Alta Moda. Todos los derechos reservados.
-            </p>
+            <p class="footer-copy">&copy; 2026 Tienda de Ropa. Todos los derechos reservados.</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <div class="footer-legal">
@@ -545,16 +479,13 @@
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <!-- Back-to-top button -->
   <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- Toast: save settings feedback -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
     <div id="settingsToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
@@ -566,10 +497,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Main JS -->
   <script type="module" src="src/js/main.js"></script>
-
 </body>
 </html>
