@@ -100,6 +100,42 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter') card.querySelector('a')?.click(); });
   });
 
+  /* 10. HELPER: RENDERIZADO UNIFICADO DE TARJETAS */
+  function renderProductCard(product) {
+    const discountPercent = product.oldPrice ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0;
+    
+    const tagHTML = product.oldPrice 
+      ? `<span class="product-tag product-tag--sale">-${discountPercent}%</span>`
+      : (product.isNew ? `<span class="product-tag">Nuevo</span>` : '');
+
+    const oldPriceHTML = product.oldPrice 
+      ? `<span class="product-old-price">$${product.oldPrice.toLocaleString()}</span>` 
+      : '';
+
+    const descriptionHTML = product.description 
+      ? `<p class="product-description-snippet">${product.description}</p>` 
+      : '<p class="product-description-snippet text-italic">Calidad premium de nuestra colección exclusiva.</p>';
+
+    return `
+      <div class="product-card" style="cursor:pointer;">
+        <div class="product-img-wrap view-details" data-id="${product.id}">
+          <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy" />
+          <div class="product-actions" onclick="event.stopPropagation();">
+            <button class="product-action-btn btn-add-to-cart" data-id="${product.id}" title="Añadir a la bolsa">
+              <i class="bi bi-bag-plus"></i>
+            </button>
+          </div>
+          ${tagHTML}
+        </div>
+        <div class="product-info view-details" data-id="${product.id}">
+          <p class="product-category">${product.category.toUpperCase()}</p>
+          <h4 class="product-name">${product.name}</h4>
+          ${descriptionHTML}
+          <p class="product-price">$${product.price.toLocaleString()} ${oldPriceHTML}</p>
+        </div>
+      </div>`;
+  }
+
   /* 10.5. PRODUCTOS DESTACADOS EN HOME */
   updateCartBadge();
   const featuredContainer = document.getElementById('featuredProductsContainer');
@@ -111,25 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         products.slice(0, 4).forEach(product => {
           const col = document.createElement('div');
           col.className = 'col-6 col-lg-3';
-          const tag = product.oldPrice
-            ? `<span class="product-tag product-tag--sale">-${Math.round(((product.oldPrice-product.price)/product.oldPrice)*100)}%</span>`
-            : (product.isNew ? `<span class="product-tag">Nuevo</span>` : '');
-          const oldP = product.oldPrice ? `<span class="product-old-price">$${product.oldPrice.toLocaleString()}</span>` : '';
-          col.innerHTML = `
-            <div class="product-card" style="cursor:pointer;">
-              <div class="product-img-wrap view-details" data-id="${product.id}">
-                <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy" />
-                <div class="product-actions" onclick="event.stopPropagation();">
-                  <button class="product-action-btn btn-add-to-cart" data-id="${product.id}" aria-label="Añadir al carrito"><i class="bi bi-bag-plus"></i></button>
-                </div>
-                ${tag}
-              </div>
-              <div class="product-info view-details" data-id="${product.id}">
-                <p class="product-category">${product.category.toUpperCase()}</p>
-                <h4 class="product-name">${product.name}</h4>
-                <p class="product-price">$${product.price.toLocaleString()} ${oldP}</p>
-              </div>
-            </div>`;
+          col.innerHTML = renderProductCard(product);
           featuredContainer.appendChild(col);
         });
         initAddToCartListeners();
@@ -145,18 +163,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const temporadaParam = urlParams.get('temporada');
     const catParam       = urlParams.get('cat') || 'novedades';
 
-    if (!temporadaParam) loadProductsByCategory(catParam);
+    // Carga inicial basada en URL
+    if (temporadaParam) {
+      loadProductsByFilter('temporada', temporadaParam);
+    } else {
+      loadProductsByFilter('cat', catParam);
+    }
 
     window.addEventListener('filterChanged', (e) => {
-      const catView = document.getElementById('catView');
-      if (catView?.style.display !== 'none') loadProductsByCategory(e.detail?.cat || 'novedades');
+      const { type, value } = e.detail || {};
+      if (type && value) loadProductsByFilter(type, value);
     });
   }
 
-  function loadProductsByCategory(cat) {
+  function loadProductsByFilter(type, value) {
     if (!productsContainer) return;
-    const titles = { novedades:['Recién Llegado','Últimas Novedades'], mujer:['Descubre','Colección Mujer'], hombre:['Descubre','Colección Hombre'], ninos:['Descubre','Colección Niños'] };
-    const [eyebrow, title] = titles[cat] || titles.novedades;
+    
+    const labels = {
+      cat: { 
+        novedades: ['Recién Llegado', 'Últimas Novedades'], 
+        mujer: ['Descubre', 'Colección Mujer'], 
+        hombre: ['Descubre', 'Colección Hombre'], 
+        ninos: ['Descubre', 'Colección Niños'] 
+      },
+      temporada: {
+        primavera: ['Temporada', 'Colección Primavera'],
+        verano: ['Temporada', 'Colección Verano'],
+        otono: ['Temporada', 'Colección Otoño'],
+        invierno: ['Temporada', 'Colección Invierno']
+      }
+    };
+
+    const [eyebrow, title] = labels[type]?.[value] || labels.cat.novedades;
     const titleEl   = document.getElementById('collectionTitle');
     const eyebrowEl = document.getElementById('collectionEyebrow');
     if (titleEl)   titleEl.textContent   = title;
@@ -167,37 +205,62 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(API_CONFIG.PRODUCTS_URL)
       .then(r => { if (!r.ok) throw new Error(); return r.json(); })
       .then(products => {
-        const filtered = cat === 'novedades' ? products.filter(p => p.isNew) : products.filter(p => p.category === cat);
+        let filtered = [];
+        if (type === 'cat') {
+          filtered = value === 'novedades' ? products.filter(p => p.isNew) : products.filter(p => p.category === value);
+        } else if (type === 'temporada') {
+          filtered = products.filter(p => p.season === value);
+        }
+
         productsContainer.innerHTML = '';
         if (!filtered.length) { productsContainer.innerHTML = `<p class="text-center my-5">No hay productos disponibles.</p>`; return; }
         filtered.forEach(product => {
           const col = document.createElement('div');
           col.className = 'col-6 col-lg-3';
-          const tag = product.oldPrice
-            ? `<span class="product-tag product-tag--sale">-${Math.round(((product.oldPrice-product.price)/product.oldPrice)*100)}%</span>`
-            : (product.isNew ? `<span class="product-tag">Nuevo</span>` : '');
-          const oldP = product.oldPrice ? `<span class="product-old-price">$${product.oldPrice.toLocaleString()}</span>` : '';
-          col.innerHTML = `
-            <div class="product-card" style="cursor:pointer;">
-              <div class="product-img-wrap view-details" data-id="${product.id}">
-                <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy" />
-                <div class="product-actions" onclick="event.stopPropagation();">
-                  <button class="product-action-btn btn-add-to-cart" data-id="${product.id}" aria-label="Añadir al carrito"><i class="bi bi-bag-plus"></i></button>
-                </div>
-                ${tag}
-              </div>
-              <div class="product-info view-details" data-id="${product.id}">
-                <p class="product-category">${product.category.toUpperCase()}</p>
-                <h4 class="product-name">${product.name}</h4>
-                <p class="product-price">$${product.price.toLocaleString()} ${oldP}</p>
-              </div>
-            </div>`;
+          col.innerHTML = renderProductCard(product);
           productsContainer.appendChild(col);
         });
         initAddToCartListeners();
         initDetailListeners();
       })
       .catch(() => { productsContainer.innerHTML = `<p class="text-center text-danger my-5">Error al cargar productos.</p>`; });
+  }
+
+  /* 11.5. SECCIÓN DE OFERTAS (página ofertas.html) */
+  const offersContainer = document.getElementById('offersContainer');
+  if (offersContainer) {
+    offersContainer.innerHTML = `
+      <div class="text-center my-5">
+        <div class="spinner-border text-dark" role="status">
+          <span class="visually-hidden">Buscando los mejores precios...</span>
+        </div>
+      </div>`;
+
+    fetch(API_CONFIG.PRODUCTS_URL)
+      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(products => {
+        // Filtro estricto: Solo productos que tengan oldPrice válido y sea superior al precio actual
+        const discountedProducts = products.filter(p => p.oldPrice && p.oldPrice > p.price);
+        
+        offersContainer.innerHTML = '';
+
+        if (!discountedProducts.length) {
+          offersContainer.innerHTML = `<p class="text-center my-5">Actualmente no hay ofertas disponibles. ¡Vuelve pronto!</p>`;
+          return;
+        }
+
+        discountedProducts.forEach(product => {
+          const col = document.createElement('div');
+          col.className = 'col-6 col-lg-3';
+          col.innerHTML = renderProductCard(product);
+          offersContainer.appendChild(col);
+        });
+        initAddToCartListeners();
+        initDetailListeners();
+      })
+      .catch(() => {
+        offersContainer.innerHTML = `<p class="text-center text-danger my-5">Error al conectar con el catálogo de ofertas.</p>`;
+      });
   }
 
   /* CARRITO — añadir */
@@ -209,8 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); e.stopPropagation();
         const id = parseInt(e.target.closest('.btn-add-to-cart').getAttribute('data-id'));
         let cart = getCartCookie();
-        const item = cart.find(i => i.id === id);
-        if (item) item.quantity += 1; else cart.push({ id, quantity: 1 });
+        const size = 'M'; // Talla por defecto para compra rápida desde la tarjeta
+        const item = cart.find(i => i.id === id && i.size === size);
+        if (item) item.quantity += 1; else cart.push({ id, quantity: 1, size });
         saveCartCookie(cart); updateCartBadge();
         showToast('Producto añadido al carrito', 'bi-bag-check');
       });
@@ -244,9 +308,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* MODAL — botón añadir */
   document.getElementById('modalBtnAddToCart')?.addEventListener('click', (e) => {
     const id = parseInt(e.currentTarget.getAttribute('data-id'));
+    const size = document.getElementById('modalProductSize')?.value || 'M';
+    const quantity = parseInt(document.getElementById('modalProductQty')?.value) || 1;
     let cart = getCartCookie();
-    const item = cart.find(i => i.id === id);
-    if (item) item.quantity += 1; else cart.push({ id, quantity: 1 });
+    const item = cart.find(i => i.id === id && i.size === size);
+    if (item) item.quantity += quantity; else cart.push({ id, quantity, size });
     saveCartCookie(cart); updateCartBadge();
     bootstrap.Modal.getInstance(document.getElementById('productDetailModal'))?.hide();
     showToast('Producto añadido al carrito', 'bi-bag-check');
@@ -282,15 +348,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${p.image}" alt="${p.name}" style="width:60px;height:80px;object-fit:cover;" class="me-3">
             <div><h5 class="h6 mb-0">${p.name}</h5><small class="text-muted">${p.category.toUpperCase()}</small></div>
           </div></td>
+          <td class="text-center"><span class="badge bg-light text-dark border fw-normal">${item.size}</span></td>
           <td class="text-center">
             <div class="d-flex justify-content-center align-items-center">
-              <button class="btn btn-sm btn-outline-secondary rounded-0 btn-qty-minus" data-id="${item.id}">-</button>
+              <button class="btn btn-sm btn-outline-secondary rounded-0 btn-qty-minus" data-id="${item.id}" data-size="${item.size}">-</button>
               <span class="mx-3">${item.quantity}</span>
-              <button class="btn btn-sm btn-outline-secondary rounded-0 btn-qty-plus" data-id="${item.id}">+</button>
+              <button class="btn btn-sm btn-outline-secondary rounded-0 btn-qty-plus" data-id="${item.id}" data-size="${item.size}">+</button>
             </div>
           </td>
           <td class="text-end">$${itemTotal.toLocaleString()}</td>
-          <td class="text-end"><button class="btn btn-link text-danger btn-delete-item" data-id="${item.id}"><i class="bi bi-trash"></i></button></td>`;
+          <td class="text-end"><button class="btn btn-link text-danger btn-delete-item" data-id="${item.id}" data-size="${item.size}"><i class="bi bi-trash"></i></button></td>`;
         cartTableBody.appendChild(row);
       });
       document.getElementById('cartSubtotal').textContent = `$${total.toLocaleString()}`;
@@ -304,21 +371,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.btn-qty-minus').forEach(btn => {
       btn.addEventListener('click', () => {
         const id = parseInt(btn.getAttribute('data-id'));
-        const item = cart.find(i => i.id === id);
-        if (item) { item.quantity -= 1; if (item.quantity <= 0) cart = cart.filter(i => i.id !== id); saveCartCookie(cart); updateCartBadge(); renderCart(); }
+        const size = btn.getAttribute('data-size');
+        const item = cart.find(i => i.id === id && i.size === size);
+        if (item) { item.quantity -= 1; if (item.quantity <= 0) cart = cart.filter(i => !(i.id === id && i.size === size)); saveCartCookie(cart); updateCartBadge(); renderCart(); }
       });
     });
     document.querySelectorAll('.btn-qty-plus').forEach(btn => {
       btn.addEventListener('click', () => {
         const id = parseInt(btn.getAttribute('data-id'));
-        const item = cart.find(i => i.id === id);
+        const size = btn.getAttribute('data-size');
+        const item = cart.find(i => i.id === id && i.size === size);
         if (item) { item.quantity += 1; saveCartCookie(cart); updateCartBadge(); renderCart(); }
       });
     });
     document.querySelectorAll('.btn-delete-item').forEach(btn => {
       btn.addEventListener('click', () => {
         const id = parseInt(btn.getAttribute('data-id'));
-        cart = cart.filter(i => i.id !== id);
+        const size = btn.getAttribute('data-size');
+        cart = cart.filter(i => !(i.id === id && i.size === size));
         saveCartCookie(cart); updateCartBadge(); renderCart();
         showToast('Producto removido del carrito', 'bi-trash');
       });
