@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.classList.remove('active');
     const href = link.getAttribute('href');
-    if (href && href !== '#' && currentPage.includes(href)) link.classList.add('active');
+    if (href && href !== '#' && currentPage === href) link.classList.add('active');
   });
 
   /* 2. SEARCH */
