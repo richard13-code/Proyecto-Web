@@ -28,13 +28,6 @@
 <body>
 
   <!-- ═══════════════════════════════════════════════
-       TOP ANNOUNCEMENT BAR
-  ═══════════════════════════════════════════════ -->
-  <div class="announcement-bar">
-    <span>Envío gratuito en compras mayores a $1,500 MXN &nbsp;·&nbsp; Nueva colección Primavera–Verano 2026 disponible</span>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════
        NAVBAR
   ═══════════════════════════════════════════════ -->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
@@ -103,7 +96,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ofertas</a>
+            <a class="nav-link" href="ofertas.html">Ofertas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Nosotros</a>
@@ -560,7 +553,7 @@
             <li><a href="#">Sobre Nosotros</a></li>
             <li><a href="#">Sustentabilidad</a></li>
             <li><a href="#">Trabaja con Nosotros</a></li>
-            <li><a href="#">Afiliados</a></li>
+            <li><a href="login.html" class="footer-link">Afiliados</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
         </div>
@@ -644,6 +637,21 @@
               <h3 class="display-6 my-2" id="modalProductName">Nombre del Producto</h3>
               <p class="fs-4 text-dark mb-4" id="modalProductPrice">$0.00</p>
               <p class="text-muted mb-4 small">Esta prenda de alta costura ha sido confeccionada con materiales sustentables premium de nuestra línea de temporada. Ajuste perfecto de diseño contemporáneo.</p>
+              
+              <div class="mb-3">
+                <label for="modalProductSize" class="form-label text-uppercase tracking-wider small text-muted shadow-none" style="font-size: 0.7rem; letter-spacing: 1px;">Seleccionar Talla</label>
+                <select class="form-select rounded-0" id="modalProductSize" style="font-family: 'Jost'; font-size: 0.85rem;">
+                  <option value="S">S — Chica</option>
+                  <option value="M" selected>M — Mediana</option>
+                  <option value="L">L — Grande</option>
+                  <option value="XL">XL — Extra Grande</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label for="modalProductQty" class="form-label text-uppercase tracking-wider small text-muted" style="font-size: 0.7rem; letter-spacing: 1px;">Cantidad</label>
+                <input type="number" class="form-control rounded-0" id="modalProductQty" value="1" min="1" style="width: 90px; font-family: 'Jost'; font-size: 0.85rem;">
+              </div>
               
               <button id="modalBtnAddToCart" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase tracking-wider">
                 <i class="bi bi-bag-plus me-2"></i> Añadir a la Bolsa

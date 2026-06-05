@@ -1108,3 +1108,34 @@ img { display: block; width: 100%; }
 [data-theme="dark"] .section-title { color: #e0d9cf; }
 [data-theme="dark"] .product-action-btn { background: #2a2a2a; color: #ddd; }
 [data-theme="dark"] .announcement-bar { background: #0e0e0e; }
+
+/* Panel administrativo */
+.card-kpi {
+  background-color: var(--white);
+  border: 1px solid var(--ivory-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card-kpi:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.text-gold {
+  color: var(--gold) !important;
+}
+
+[data-theme="dark"] .card-kpi {
+  background-color: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+/* Loggin */
+.sidebar-link {
+  transition: all 0.25s ease;
+}
+.sidebar-link:hover, .active-admin {
+  background-color: rgba(201, 168, 76, 0.15) !important;
+  color: var(--gold) !important;
+  font-weight: 500;
+}

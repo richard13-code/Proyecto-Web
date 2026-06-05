@@ -42,7 +42,7 @@
     "oldPrice": 1100,
     "category": "hombre",
     "isNew": true,
-    "image": "https://unsplash.com/es/fotos/un-hombre-con-camisa-blanca-y-chaqueta-negra-9qm5tXe5ZTM?q=80&w=600&auto=format&fit=crop"
+    "image": "src/img/camisa_algodon.webp"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "oldPrice": null,
     "category": "ninos",
     "isNew": true,
-    "image": "https://unsplash.com/es/fotos/un-nino-pequeno-de-pie-frente-a-un-arbol-de-navidad-HAX-8CXt4DA?q=80&w=600&auto=format&fit=crop"
+    "image": "src/img/sudadera.jpg"
   },
 
   { "id": 7, "name": "Vestido Largo de Seda", "category": "mujer", "price": 2499, "isNew": true, "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop", "description": "Confeccionado en seda pura con una caída fluida excepcional, tirantes finos ajustables y escote elegante para eventos de gala nocturnos." },

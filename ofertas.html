@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Ropa — Alta Moda</title>
+  <title>Tienda de Ropa — Ofertas</title>
 
   <!-- Bootstrap 5 CSS -->
   <link
@@ -27,24 +27,17 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════════ -->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
     <div class="container-fluid px-4">
-
-      <!-- Brand -->
       <a class="navbar-brand" href="index.html">
         <span class="brand-word">Tienda de Ropa</span>
       </a>
 
-      <!-- Mobile: cart + settings toggle -->
       <div class="d-flex d-lg-none align-items-center gap-3 ms-auto me-2">
         <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito">
           <i class="bi bi-bag"></i>
           <span class="cart-badge">3</span>
         </a>
-        <!-- Settings offcanvas trigger (mobile) -->
         <button
           class="nav-icon-btn"
           type="button"
@@ -57,7 +50,6 @@
         </button>
       </div>
 
-      <!-- Hamburger for main menu -->
       <button
         class="navbar-toggler"
         type="button"
@@ -72,13 +64,10 @@
         <span class="hamburger-line"></span>
       </button>
 
-      <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="navbarMain">
-
-        <!-- Nav links (left of search) -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -96,14 +85,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ofertas.html">Ofertas</a>
+            <a class="nav-link active" href="ofertas.html">Ofertas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Nosotros</a>
           </li>
         </ul>
 
-        <!-- Search bar -->
         <form class="search-form d-flex align-items-center me-lg-3 my-2 my-lg-0" role="search" id="searchForm">
           <div class="search-wrapper">
             <input
@@ -119,14 +107,11 @@
           </div>
         </form>
 
-        <!-- Desktop: cart + settings -->
         <div class="d-none d-lg-flex align-items-center gap-3">
           <a href="carrito.html" class="nav-icon-btn position-relative" aria-label="Carrito de compras">
             <i class="bi bi-bag"></i>
             <span class="cart-badge">3</span>
           </a>
-
-          <!-- Settings offcanvas trigger (desktop) -->
           <button
             class="nav-icon-btn settings-btn"
             type="button"
@@ -138,14 +123,10 @@
             <i class="bi bi-sliders2"></i>
           </button>
         </div>
-
-      </div><!-- /collapse -->
+      </div>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════
-       SETTINGS OFFCANVAS (Menú hamburguesa de Config.)
-  ═══════════════════════════════════════════════ -->
   <div
     class="offcanvas offcanvas-end offcanvas-settings"
     tabindex="-1"
@@ -164,8 +145,6 @@
       ></button>
     </div>
     <div class="offcanvas-body">
-
-      <!-- Dark mode -->
       <div class="settings-section">
         <h6 class="settings-section-title">Apariencia</h6>
         <div class="setting-row">
@@ -186,7 +165,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Language -->
       <div class="settings-section">
         <h6 class="settings-section-title">Idioma y Región</h6>
         <div class="setting-row flex-column align-items-start gap-2">
@@ -210,7 +188,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Account -->
       <div class="settings-section">
         <h6 class="settings-section-title">Cuenta</h6>
         <div class="d-flex flex-column gap-2">
@@ -223,7 +200,6 @@
 
       <hr class="settings-divider" />
 
-      <!-- Notifications -->
       <div class="settings-section">
         <h6 class="settings-section-title">Notificaciones</h6>
         <div class="setting-row">
@@ -240,194 +216,152 @@
         </div>
       </div>
 
-      <!-- Save button -->
       <button class="btn btn-settings-save w-100 mt-4" id="saveSettings">
         Guardar Cambios
       </button>
-
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════
-       SECTION: FEATURES BAR
-  ═══════════════════════════════════════════════ -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="section-eyebrow">Ofertas Especiales</span>
+          <h1 class="section-title">Encuentra las mejores promociones de la temporada</h1>
+          <p class="section-subtitle">
+            Descubre prendas seleccionadas con descuentos de hasta el 50%. Renovamos tu guardarropa con estilo y precios irresistibles.
+          </p>
+          <a href="carrito.html" class="btn btn-category btn-category--dark mt-3">
+            Ver mi carrito <i class="bi bi-bag ms-2"></i>
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="product-img-wrap" style="border-radius: 24px; overflow: hidden;">
+            <img src="src/img/slide-1.jpg" alt="Ofertas de temporada" class="product-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="features-bar">
     <div class="container-fluid">
       <div class="row g-0">
         <div class="col-6 col-md-3 feature-item">
+          <i class="bi bi-percent"></i>
+          <span>Hasta 50% de descuento</span>
+        </div>
+        <div class="col-6 col-md-3 feature-item">
+          <i class="bi bi-clock-history"></i>
+          <span>Stock limitado</span>
+        </div>
+        <div class="col-6 col-md-3 feature-item">
           <i class="bi bi-truck"></i>
-          <span>Envío Gratis +$1,500</span>
+          <span>Entrega rápida</span>
         </div>
         <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-arrow-return-left"></i>
-          <span>Devoluciones 30 días</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-shield-check"></i>
-          <span>Pago 100% Seguro</span>
-        </div>
-        <div class="col-6 col-md-3 feature-item">
-          <i class="bi bi-headset"></i>
-          <span>Soporte 24/7</span>
+          <i class="bi bi-bag-check"></i>
+          <span>Compra segura</span>
         </div>
       </div>
     </div>
   </section>
 
- <!-- ═══════════════════════════════════════════════
-       SECTION: DESGLOSE CUENTA CARRITO
-  ═══════════════════════════════════════════════ -->
-<section class="cart-section py-5" style="margin-top: 100px;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="text-uppercase tracking-wider text-muted small">Tu Bolsa</span>
-        <h2 class="display-5">Carrito de Compras</h2>
-      </div>
-
-      <div class="row g-5">
-        <div class="col-lg-8">
-          <div class="table-responsive">
-            <table class="table align-middle">
-            <thead>
-              <tr>
-                <th scope="col" class="border-0 text-muted small text-uppercase">Producto</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-center">Talla</th> <th scope="col" class="border-0 text-muted small text-uppercase text-center">Cantidad</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-end">Precio</th>
-                <th scope="col" class="border-0 text-muted small text-uppercase text-end">Eliminar</th>
-              </tr>
-            </thead>
-              <tbody id="cartTableBody">
-                </tbody>
-            </table>
-          </div>
-          <div id="emptyCartMessage" class="text-center py-5 d-none">
-            <i class="bi bi-bag-x display-1 text-muted mb-3 d-block"></i>
-            <p class="lead">Tu carrito está vacío.</p>
-            <a href="coleccion.html?cat=novedades" class="btn btn-dark px-4 rounded-0">Ver Novedades</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="bg-light p-4 border">
-            <h3 class="h5 mb-4 text-uppercase tracking-wider">Resumen del Pedido</h3>
-            <div class="d-flex justify-content-between mb-3">
-              <span class="text-muted">Subtotal</span>
-              <span id="cartSubtotal">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between mb-3">
-              <span class="text-muted">Envío</span>
-              <span class="text-success small">Gratis</span>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between mb-4">
-              <strong class="text-uppercase">Total</strong>
-              <strong id="cartTotal" class="fs-5">$0.00</strong>
-            </div>
-            <button id="btnCheckout" class="btn btn-dark w-100 rounded-0 py-3 text-uppercase tracking-wider">
-              Proceder al Pago
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       SECTION: PRODUCTOS DESTACADOS
-  ═══════════════════════════════════════════════ -->
-  <section class="featured-section">
+  <section class="featured-section py-5">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-eyebrow">Lo Más Visto</span>
-        <h2 class="section-title">Productos Destacados</h2>
+        <span class="section-eyebrow">Ofertas</span>
+        <h2 class="section-title">Productos en promoción</h2>
+        <p class="section-subtitle">Artículos seleccionados con descuentos especiales. Aprovecha antes de que se agoten.</p>
       </div>
-      <div class="row g-3">
-
-        <div class="col-6 col-lg-3">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="product-card">
             <div class="product-img-wrap">
-              <img src="src/img/producto-1.jpg" alt="Blazer Slim" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+              <img src="src/img/producto-1.jpg" alt="Blazer estructurado" class="product-img" loading="lazy" />
+              <span class="product-tag product-tag--sale">-40%</span>
+              <div class="product-actions" onclick="event.stopPropagation();">
+                <button class="product-action-btn btn-add-to-cart" aria-label="Añadir al carrito">
+                  <i class="bi bi-bag-plus"></i>
+                </button>
               </div>
-              <span class="product-tag">Nuevo</span>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Mujer</p>
+              <h4 class="product-name">Blazer Estructurado</h4>
+              <p class="product-price">$1,290 <span class="product-old-price">$2,150</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="src/img/producto-2.jpg" alt="Camisa premium" class="product-img" loading="lazy" />
+              <span class="product-tag product-tag--sale">-30%</span>
+              <div class="product-actions" onclick="event.stopPropagation();">
+                <button class="product-action-btn btn-add-to-cart" aria-label="Añadir al carrito">
+                  <i class="bi bi-bag-plus"></i>
+                </button>
+              </div>
             </div>
             <div class="product-info">
               <p class="product-category">Hombre</p>
-              <h4 class="product-name">Blazer Slim Fit</h4>
-              <p class="product-price">$1,890 <span class="product-old-price">$2,400</span></p>
+              <h4 class="product-name">Camisa Premium</h4>
+              <p class="product-price">$780 <span class="product-old-price">$1,120</span></p>
             </div>
           </div>
         </div>
 
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="product-card">
             <div class="product-img-wrap">
-              <img src="src/img/producto-2.jpg" alt="Vestido Floral" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+              <img src="src/img/producto-3.jpg" alt="Vestido de noche" class="product-img" loading="lazy" />
+              <span class="product-tag product-tag--sale">-35%</span>
+              <div class="product-actions" onclick="event.stopPropagation();">
+                <button class="product-action-btn btn-add-to-cart" aria-label="Añadir al carrito">
+                  <i class="bi bi-bag-plus"></i>
+                </button>
               </div>
             </div>
             <div class="product-info">
               <p class="product-category">Mujer</p>
-              <h4 class="product-name">Vestido Floral Midi</h4>
-              <p class="product-price">$1,250</p>
+              <h4 class="product-name">Vestido de Noche</h4>
+              <p class="product-price">$1,450 <span class="product-old-price">$2,230</span></p>
             </div>
           </div>
         </div>
 
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="product-card">
             <div class="product-img-wrap">
-              <img src="src/img/producto-3.jpg" alt="Conjunto Niños" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
+              <img src="src/img/producto-4.jpg" alt="Short casual" class="product-img" loading="lazy" />
+              <span class="product-tag product-tag--sale">-25%</span>
+              <div class="product-actions" onclick="event.stopPropagation();">
+                <button class="product-action-btn btn-add-to-cart" aria-label="Añadir al carrito">
+                  <i class="bi bi-bag-plus"></i>
+                </button>
               </div>
-              <span class="product-tag product-tag--sale">−20%</span>
             </div>
             <div class="product-info">
               <p class="product-category">Niños</p>
-              <h4 class="product-name">Conjunto Verano</h4>
-              <p class="product-price">$680 <span class="product-old-price">$850</span></p>
+              <h4 class="product-name">Short Casual</h4>
+              <p class="product-price">$420 <span class="product-old-price">$560</span></p>
             </div>
           </div>
         </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-img-wrap">
-              <img src="src/img/producto-4.jpg" alt="Gabardina" class="product-img" loading="lazy" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Añadir a favoritos"><i class="bi bi-heart"></i></button>
-                <button class="product-action-btn" aria-label="Vista rápida"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
-            <div class="product-info">
-              <p class="product-category">Mujer</p>
-              <h4 class="product-name">Gabardina Clásica</h4>
-              <p class="product-price">$2,990</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════
-       SECTION: NEWSLETTER
-  ═══════════════════════════════════════════════ -->
   <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-inner">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6">
             <span class="section-eyebrow" style="color:var(--gold-light)">Únete a X</span>
-            <h2 class="newsletter-title">Sé el primero en<br /><em>conocer las novedades</em></h2>
-            <p class="newsletter-sub">Recibe acceso exclusivo a nuevas colecciones, ofertas y eventos especiales.</p>
+            <h2 class="newsletter-title">Sé el primero en<br /><em>conocer las promociones</em></h2>
+            <p class="newsletter-sub">Recibe ofertas exclusivas y acceso anticipado a descuentos antes que nadie.</p>
           </div>
           <div class="col-lg-6">
             <form class="newsletter-form" id="newsletterForm" novalidate>
@@ -453,23 +387,15 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
-
-      <!-- Footer top -->
       <div class="row gy-5 footer-top">
-
-        <!-- Brand column -->
         <div class="col-12 col-md-4 col-lg-3">
           <a href="index.html" class="footer-brand">Tienda de Ropa</a>
           <p class="footer-tagline">
             Moda consciente, diseño atemporal.<br />
             Cada prenda cuenta una historia.
           </p>
-          <!-- Social icons -->
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -478,8 +404,6 @@
             <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-
-        <!-- Links columns -->
         <div class="col-6 col-md-2 col-lg-2 offset-lg-1">
           <h6 class="footer-col-title">Tienda</h6>
           <ul class="footer-links">
@@ -487,10 +411,9 @@
             <li><a href="#coleccion.html?cat=hombre">Hombre</a></li>
             <li><a href="#coleccion.html?cat=ninos">Niños</a></li>
             <li><a href="#coleccion.html?cat=novedades">Novedades</a></li>
-            <li><a href="#">Ofertas</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Ayuda</h6>
           <ul class="footer-links">
@@ -501,7 +424,6 @@
             <li><a href="#">Contáctanos</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-md-2 col-lg-2">
           <h6 class="footer-col-title">Empresa</h6>
           <ul class="footer-links">
@@ -512,8 +434,6 @@
             <li><a href="#">Blog</a></li>
           </ul>
         </div>
-
-        <!-- Contact column -->
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-col-title">Contacto</h6>
           <ul class="footer-links footer-contact">
@@ -523,16 +443,11 @@
             <li><i class="bi bi-clock me-2"></i>Lun–Sáb: 10:00–20:00</li>
           </ul>
         </div>
-
-      </div><!-- /footer-top -->
-
-      <!-- Footer bottom -->
+      </div>
       <div class="footer-bottom">
         <div class="row align-items-center gy-2">
           <div class="col-md-6 text-center text-md-start">
-            <p class="footer-copy">
-              &copy; 2026 ejemolo Alta Moda. Todos los derechos reservados.
-            </p>
+            <p class="footer-copy">&copy; 2026 ejemolo Alta Moda. Todos los derechos reservados.</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <div class="footer-legal">
@@ -545,16 +460,13 @@
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <!-- Back-to-top button -->
   <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- Toast: save settings feedback -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
     <div id="settingsToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
@@ -566,10 +478,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Main JS -->
   <script type="module" src="src/js/main.js"></script>
-
 </body>
 </html>
