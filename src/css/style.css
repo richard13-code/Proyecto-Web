@@ -1139,3 +1139,51 @@ img { display: block; width: 100%; }
   color: var(--gold) !important;
   font-weight: 500;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   NUEVOS ESTILOS — Modales de Ayuda + Filtros de Temporada
+═══════════════════════════════════════════════════════════ */
+
+/* Modales */
+.modal-content { border: none; border-radius: 0 !important; font-family: var(--font-body); }
+.modal-header { border-bottom: none; }
+.modal-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--charcoal); }
+
+#tallasTab .nav-link { border-radius: 0; color: var(--muted); border-bottom: 2px solid transparent; font-family: var(--font-body); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+#tallasTab .nav-link.active { color: var(--charcoal); border-bottom-color: var(--gold); background: transparent; }
+#tallasTab .nav-link:hover { color: var(--gold); }
+/* Los mismos para la instancia en coleccion.html */
+#tallasTab2 .nav-link { border-radius: 0; color: var(--muted); border-bottom: 2px solid transparent; font-family: var(--font-body); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+#tallasTab2 .nav-link.active { color: var(--charcoal); border-bottom-color: var(--gold); background: transparent; }
+
+.accordion-button:not(.collapsed) { color: var(--gold); background-color: var(--gold-pale); box-shadow: none; }
+.accordion-button:focus { box-shadow: 0 0 0 3px var(--gold-pale); }
+.modal .form-control:focus, .modal .form-select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-pale); }
+
+/* Filtros de temporada */
+.collection-filters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 2.5rem; }
+.filter-btn { font-family: var(--font-body); font-size: .72rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; border: 1px solid var(--ivory-dark); background: transparent; color: var(--muted); padding: .4rem 1rem; border-radius: 2px; cursor: pointer; transition: all var(--transition); }
+.filter-btn:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
+.filter-btn.active { background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
+.filter-separator { width: 1px; background: var(--ivory-dark); margin: 0 .25rem; align-self: stretch; }
+
+/* Cabeceras de temporada */
+.season-header { text-align: center; padding: 3rem 0 1rem; }
+.season-badge { display: inline-block; font-family: var(--font-body); font-size: .65rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; background: var(--gold-pale); color: var(--gold); padding: .3rem .9rem; margin-bottom: .75rem; border-radius: 2px; }
+.season-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; color: var(--charcoal); margin-bottom: .5rem; }
+.season-title em { font-style: italic; color: var(--gold); }
+.season-divider { width: 40px; height: 1px; background: var(--gold); margin: 1rem auto 2rem; }
+.season-block { display: none; }
+.season-block.visible { display: block; }
+#seasonSection { scroll-margin-top: 80px; }
+
+/* Dark mode */
+[data-theme="dark"] .modal-content { background: #1a1a1a; color: #e0d9cf; }
+[data-theme="dark"] .modal-title { color: #e0d9cf; }
+[data-theme="dark"] .modal .form-control, [data-theme="dark"] .modal .form-select { background: #2a2a2a; border-color: #333; color: #e0d9cf; }
+[data-theme="dark"] .accordion-item { background: #1a1a1a; border-color: #2a2a2a; }
+[data-theme="dark"] .accordion-button { background: #1a1a1a; color: #e0d9cf; }
+[data-theme="dark"] .accordion-button:not(.collapsed) { background: #2a2a2a; }
+[data-theme="dark"] .filter-btn { border-color: #333; color: #888; }
+[data-theme="dark"] .filter-btn.active { background: #e0d9cf; color: #1a1a1a; border-color: #e0d9cf; }
+[data-theme="dark"] .season-title { color: #e0d9cf; }
